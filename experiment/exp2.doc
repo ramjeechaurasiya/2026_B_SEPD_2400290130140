@@ -120,26 +120,103 @@ Digital forensic investigation.
 
 
 
-//after nitin, lakshay contiue from here 
+Operational Feasibility Analysis
+
+Operational feasibility analysis determines whether the proposed Cybersecurity Awareness Platform will be practical, easy to use, accepted by users, maintainable, and beneficial in real-world situations.
+
+The proposed system is operationally feasible because it provides a simple and interactive platform that users can access through a web browser. The system is designed to improve cybersecurity awareness and help users identify and prevent phishing attacks.
+
+Factor | Assessment | Remarks
+User Acceptance | High | Cybersecurity awareness is useful and relevant for users
+Ease of Use | High | Simple and interactive user interface
+Training Requirement | Low | Minimal technical knowledge is required
+Accessibility | High | The platform can be accessed through a web browser
+Maintainability | High | Modular design simplifies maintenance
+User Engagement | High | Simulations and quizzes improve learning
+Educational Benefit | High | Improves cybersecurity awareness
 
 
+User Acceptance
+
+The proposed system is expected to have high user acceptance because cybersecurity awareness is important for people who use digital platforms and the internet.
+
+Users can benefit from learning how to identify phishing attacks, suspicious emails, malicious links, fake websites, and other fraudulent activities.
+
+The interactive nature of the platform can encourage users to actively participate in cybersecurity awareness training.
 
 
+Ease of Use
+
+The system will provide a simple and user-friendly interface.
+
+Users will be able to:
+
+- Access cybersecurity awareness training material.
+- Learn about phishing attacks.
+- Participate in phishing simulations.
+- Attempt interactive quizzes.
+- View their performance.
+- Receive feedback based on their results.
+
+The system will be designed so that users can easily understand and navigate its features.
 
 
+Training Requirement
+
+Users do not require advanced technical knowledge to operate the proposed system.
+
+The platform will provide clear instructions and a simple interface for accessing different features.
+
+Therefore, the training requirement for users is minimal.
 
 
+Accessibility
+
+The proposed system can be accessed through a web browser.
+
+Users with a computer or other supported device and an internet connection can access the platform.
+
+The web-based nature of the system improves accessibility and convenience.
 
 
+Maintainability
+
+The proposed system can be developed using a modular structure.
+
+Different components of the system can be maintained independently.
+
+The major modules may include:
+
+- User Authentication Module.
+- Training Module.
+- Phishing Simulation Module.
+- Quiz Module.
+- Performance Assessment Module.
+
+This modular design simplifies maintenance and makes future updates easier.
 
 
+User Engagement
+
+Interactive features such as phishing simulations and quizzes can improve user engagement.
+
+Instead of only reading theoretical information, users can actively participate in learning activities and test their knowledge.
+
+This practical approach can help users better understand phishing attacks and improve their ability to identify suspicious activities.
 
 
+Operational Benefits
 
+The proposed Cybersecurity Awareness Platform provides several benefits:
 
+- Improves cybersecurity awareness.
+- Helps users identify phishing attacks.
+- Provides practical learning experiences.
+- Encourages safe internet practices.
+- Allows users to evaluate their knowledge.
+- Provides feedback for improvement.
 
-
-
+Therefore, the proposed system is operationally feasible and beneficial for users.
 
 
 
