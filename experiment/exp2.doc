@@ -100,92 +100,87 @@ Execution of real phishing attacks.
 Digital forensic investigation.
 
 
-// Nitin continue from here
+Technical Feasibility Analysis
 
+Technical feasibility analysis determines whether the proposed Cybersecurity Awareness Platform can be developed using the available technologies, hardware, software tools, and technical resources.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Operational Feasibility Analysis
-
-Operational feasibility analysis determines whether the proposed Cybersecurity Awareness Platform will be practical, easy to use, accepted by users, maintainable, and beneficial in real-world situations.
-
-The proposed system is operationally feasible because it provides a simple and interactive platform that users can access through a web browser. The system is designed to improve cybersecurity awareness and help users identify and prevent phishing attacks.
+The proposed system is technically feasible because modern web technologies and development tools are readily available and suitable for developing a web-based cybersecurity awareness platform.
 
 Factor | Assessment | Remarks
-User Acceptance | High | Cybersecurity awareness is useful and relevant for users
-Ease of Use | High | Simple and interactive user interface
-Training Requirement | Low | Minimal technical knowledge is required
-Accessibility | High | The platform can be accessed through a web browser
-Maintainability | High | Modular design simplifies maintenance
-User Engagement | High | Simulations and quizzes improve learning
-Educational Benefit | High | Improves cybersecurity awareness
+Technology | Feasible | Modern web technologies can be used for development
+Frontend | Feasible | HTML, CSS, JavaScript, and React.js can be used
+Backend | Feasible | Node.js and Express.js can be used
+Database | Feasible | MongoDB can be used to store application data
+Hardware | Feasible | Standard computers are sufficient for development and testing
+Software Tools | Feasible | VS Code, Git, GitHub, and Postman are available
+Security | Feasible | Authentication and secure data handling can be implemented
+Scalability | Feasible | Modular architecture supports future expansion
 
 
-User Acceptance
+Technology Feasibility
 
-The proposed system is expected to have high user acceptance because cybersecurity awareness is important for people who use digital platforms and the internet.
+The proposed system can be developed using modern and commonly available web technologies.
 
-Users can benefit from learning how to identify phishing attacks, suspicious emails, malicious links, fake websites, and other fraudulent activities.
+The frontend of the application can be developed using HTML, CSS, JavaScript, and React.js. These technologies can be used to create an interactive and user-friendly interface.
 
-The interactive nature of the platform can encourage users to actively participate in cybersecurity awareness training.
+The backend can be developed using Node.js and Express.js. These technologies can handle application logic, user requests, authentication, and communication with the database.
 
+MongoDB can be used as the database to store user information, quiz data, training content, simulation results, and performance records.
 
-Ease of Use
-
-The system will provide a simple and user-friendly interface.
-
-Users will be able to:
-
-- Access cybersecurity awareness training material.
-- Learn about phishing attacks.
-- Participate in phishing simulations.
-- Attempt interactive quizzes.
-- View their performance.
-- Receive feedback based on their results.
-
-The system will be designed so that users can easily understand and navigate its features.
+These technologies are widely used, well documented, and suitable for the development of the proposed system.
 
 
-Training Requirement
+Hardware Feasibility
 
-Users do not require advanced technical knowledge to operate the proposed system.
+The proposed Cybersecurity Awareness Platform does not require expensive or specialized hardware.
 
-The platform will provide clear instructions and a simple interface for accessing different features.
+A standard computer system with the following resources is sufficient:
 
-Therefore, the training requirement for users is minimal.
+- A computer or laptop with a standard processor.
+- Basic memory and storage capacity.
+- Internet connection.
+- A web browser.
 
-
-Accessibility
-
-The proposed system can be accessed through a web browser.
-
-Users with a computer or other supported device and an internet connection can access the platform.
-
-The web-based nature of the system improves accessibility and convenience.
+Therefore, the project is feasible from a hardware perspective.
 
 
-Maintainability
+Software Tools Feasibility
 
-The proposed system can be developed using a modular structure.
+The required software development tools are easily available and suitable for developing the proposed system.
 
-Different components of the system can be maintained independently.
+The following tools can be used:
 
-The major modules may include:
+- Visual Studio Code for software development.
+- Git for version control.
+- GitHub for source code management and team collaboration.
+- MongoDB for database management.
+- Postman for API testing.
+- UML tools for system design and documentation.
+
+Most of these tools are freely available or open source. Therefore, the required software resources are easily accessible.
+
+
+Security Feasibility
+
+The proposed system can implement basic security mechanisms to protect user information and application data.
+
+Possible security measures include:
+
+- User authentication.
+- Secure password storage.
+- Input validation.
+- Access control.
+- Secure communication between the application and database.
+- Protection of user information.
+
+Since the project focuses on cybersecurity awareness, secure software development practices should be followed during implementation.
+
+
+Scalability Feasibility
+
+The proposed system can be designed using a modular architecture.
+
+The application can contain separate modules such as:
 
 - User Authentication Module.
 - Training Module.
@@ -193,30 +188,20 @@ The major modules may include:
 - Quiz Module.
 - Performance Assessment Module.
 
-This modular design simplifies maintenance and makes future updates easier.
+This modular structure makes the system easier to maintain and allows new features to be added in the future.
+
+Possible future enhancements include:
+
+- Advanced phishing simulations.
+- Administrator dashboard.
+- User performance analytics.
+- Certificate generation.
+- Personalized learning recommendations.
+
+Therefore, the proposed Cybersecurity Awareness Platform is technically feasible and scalable.
 
 
-User Engagement
 
-Interactive features such as phishing simulations and quizzes can improve user engagement.
-
-Instead of only reading theoretical information, users can actively participate in learning activities and test their knowledge.
-
-This practical approach can help users better understand phishing attacks and improve their ability to identify suspicious activities.
-
-
-Operational Benefits
-
-The proposed Cybersecurity Awareness Platform provides several benefits:
-
-- Improves cybersecurity awareness.
-- Helps users identify phishing attacks.
-- Provides practical learning experiences.
-- Encourages safe internet practices.
-- Allows users to evaluate their knowledge.
-- Provides feedback for improvement.
-
-Therefore, the proposed system is operationally feasible and beneficial for users.
 
 
 
