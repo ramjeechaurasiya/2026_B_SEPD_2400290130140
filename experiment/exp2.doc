@@ -1,0 +1,167 @@
+Experiment No. 2
+Problem Identification and Feasibility: Software Design Principles
+
+
+Aim
+
+To identify the problem addressed by the Cybersecurity Awareness Platform and prepare its problem statement, objectives, scope, and technical and operational feasibility analysis.
+
+
+Objectives
+1.To identify the real-world cybersecurity problem addressed by the proposed software project.
+2.To prepare a clear and well-defined problem statement.
+3.To define the objectives and scope of the project.
+4.To perform technical and operational feasibility analysis.
+5.To evaluate the viability of the proposed solution.
+
+Introduction
+
+Problem identification is one of the most important stages of software engineering. Before developing a software system, it is necessary to understand the real-world problem that the system intends to solve.
+
+A well-defined problem statement helps developers understand the requirements and expectations of users. Similarly, a feasibility study helps determine whether the proposed software solution is practical, technically possible, and operationally acceptable.
+
+With the increasing use of digital platforms, cyber threats such as phishing attacks have become a major concern. Many users are unable to identify suspicious emails, fake websites, malicious links, and fraudulent messages. Lack of cybersecurity awareness increases the possibility of users becoming victims of cyber attacks.
+
+The proposed Cybersecurity Awareness Platform aims to address this problem by providing interactive training, phishing simulations, quizzes, and performance-based awareness assessment.
+
+
+
+Selected Project
+Project Title
+
+Cybersecurity Awareness Platform for Phishing Detection and Prevention
+
+Domain
+
+Cybersecurity and Information Security
+
+
+Problem Statement
+
+Phishing attacks are one of the most common cybersecurity threats faced by internet users. Attackers often use fake emails, fraudulent websites, malicious links, and deceptive messages to steal sensitive information such as usernames, passwords, banking details, and personal data.
+
+Many users lack sufficient knowledge and practical experience to identify phishing attempts. Traditional cybersecurity awareness methods are often limited to theoretical information and do not provide users with practical experience in recognizing real-world phishing attacks.
+
+Therefore, there is a need for an interactive Cybersecurity Awareness Platform that helps users learn how to identify and prevent phishing attacks through educational content, realistic phishing simulations, interactive quizzes, and performance-based awareness assessment.
+
+The proposed system will provide a practical learning environment where users can improve their ability to recognize suspicious activities and develop better cybersecurity awareness.
+
+Project Objectives
+
+The main objectives of the proposed Cybersecurity Awareness Platform are:
+
+1.To provide cybersecurity awareness training to users.
+2.To educate users about phishing attacks and common phishing techniques.
+3.To simulate realistic phishing scenarios for practical learning.
+4.To help users identify suspicious emails, links, and websites.
+5.To conduct interactive quizzes to evaluate user knowledge.
+6.To assess user performance based on training and quiz results.
+7.To provide feedback to help users improve their cybersecurity awareness.
+8.To develop a secure, user-friendly, and interactive platform.
+
+
+Project Scope
+
+The proposed Cybersecurity Awareness Platform focuses on improving user awareness and knowledge related to phishing attacks.
+
+The system includes the following features:
+
+User Training
+
+Users can access educational content related to phishing attacks, suspicious emails, fake websites, malicious links, social engineering techniques, and cybersecurity best practices.
+
+Phishing Simulations
+
+The system will provide realistic and safe phishing scenarios where users can practice identifying suspicious emails, fake URLs, malicious links, and fraudulent websites.
+
+Interactive Quizzes
+
+Users can attempt quizzes related to cybersecurity and phishing awareness. These quizzes will help evaluate the user's understanding and ability to identify suspicious activities.
+
+Performance Assessment
+
+The system will analyze user performance based on quiz scores, simulation results, correct and incorrect answers, and overall awareness level.
+
+Feedback
+
+The platform will provide feedback to users so that they can understand their mistakes and improve their cybersecurity awareness.
+
+
+
+Out of Scope
+
+The following features are outside the scope of the current project:
+
+Real-time antivirus software.
+Malware removal.
+Network intrusion detection.
+Firewall development.
+Execution of real phishing attacks.
+Digital forensic investigation.
+
+
+// Nitin continue from here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//after nitin, lakshay contiue from here 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Analysis
+
+The proposed Cybersecurity Awareness Platform addresses the growing problem of phishing attacks and the lack of cybersecurity awareness among users.
+
+The system provides an educational and practical environment where users can learn about phishing attacks and practice identifying suspicious activities. Interactive simulations and quizzes can improve user engagement compared to traditional theoretical awareness methods.
+
+The technical and operational feasibility analysis indicates that the project can be successfully implemented using available technologies and resources.
+
+
+Observation
+
+Clearly defining the problem, objectives, scope, and feasibility requirements provides a strong foundation for software design and development.
+
+The proposed Cybersecurity Awareness Platform is focused on solving a real-world problem by improving users' ability to recognize and prevent phishing attacks.
+
+
+
+Result
+
+The problem statement, project objectives, project scope, and feasibility requirements for the Cybersecurity Awareness Platform were successfully identified and prepared.
+
+The proposed solution is practical and provides an effective approach for improving cybersecurity awareness related to phishing detection and prevention.
