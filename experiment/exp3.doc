@@ -1,0 +1,188 @@
+EXPERIMENT NO. 3
+Software Design Principles
+
+Identify stakeholders and perform requirement elicitation for the selected software project using suitable techniques such as interviews, questionnaires, observation, or user personas; prepare user stories and the Requirement Gathering Report.
+
+Aim
+
+To identify stakeholders and perform requirement elicitation for the Cybersecurity Awareness Platform for Phishing Detection and Prevention using suitable elicitation techniques, prepare user stories, and develop a Requirement Gathering Report.
+
+Objectives
+To identify the key stakeholders of the proposed Cybersecurity Awareness Platform.
+To apply suitable requirement elicitation techniques.
+To gather functional and non-functional requirements.
+To prepare user personas representing different types of users.
+To prepare user stories with acceptance criteria.
+To document the Requirement Gathering Report.
+Introduction
+
+Requirement elicitation is the process of identifying, collecting, and understanding the needs, expectations, and requirements of stakeholders. The success of a software project depends on how accurately the requirements of users and other stakeholders are identified and documented.
+
+Different stakeholders may have different expectations from a software system. Therefore, suitable requirement elicitation techniques are used to collect complete and accurate requirements. Common requirement elicitation techniques include interviews, questionnaires, observation, workshops, and user personas.
+
+The proposed Cybersecurity Awareness Platform for Phishing Detection and Prevention aims to improve users' understanding of cybersecurity threats, especially phishing attacks. The platform will provide educational content, phishing simulations, interactive quizzes, performance assessment, and feedback.
+
+Requirement elicitation helps identify the needs of users and ensures that the proposed system provides useful, practical, secure, and user-friendly features.
+
+Selected Project
+
+Project Title: Cybersecurity Awareness Platform for Phishing Detection and Prevention
+Domain: Cybersecurity and Information Security
+
+Stakeholder Identification
+
+Stakeholder: End User
+Role: Uses the platform to learn about cybersecurity and phishing attacks.
+Requirements: Easy-to-use interface, useful learning material, realistic simulations, quizzes, and feedback.
+
+Stakeholder: Administrator
+Role: Manages users, training content, quizzes, and system activities.
+Requirements: User management, content management, monitoring, and performance tracking.
+
+Stakeholder: Team Leader
+Role: Coordinates project activities, requirements, and development progress.
+Requirements: Clear project requirements, proper documentation, task coordination, and successful project implementation.
+
+Stakeholder: Developer
+Role: Develops and maintains the software application.
+Requirements: Clear functional requirements, suitable technologies, modular design, and technical documentation.
+
+Stakeholder: Tester
+Role: Tests the application and identifies errors or defects.
+Requirements: Clear requirements, testable features, expected outputs, and reliable system behavior.
+
+Requirement Elicitation Techniques
+1. Interview
+
+Purpose: To discuss the requirements, expectations, and cybersecurity awareness needs of users and other stakeholders.
+Outcome: Detailed functional and non-functional requirements for the system.
+
+2. Questionnaire
+
+Purpose: To collect feedback from multiple users regarding their cybersecurity knowledge, experience with phishing attacks, and expectations from the platform.
+Outcome: User expectations, preferences, common cybersecurity knowledge gaps, and important platform features.
+
+3. Observation
+
+Purpose: To observe how users interact with cybersecurity learning platforms and identify difficulties faced while understanding phishing-related content.
+Outcome: Usability requirements, navigation requirements, and user interaction requirements.
+
+4. User Persona
+
+Purpose: To represent different categories of users with different goals, technical knowledge, and cybersecurity awareness levels.
+Outcome: User-centred requirements and better understanding of user needs.
+
+Sample Requirement Gathering
+Interview Findings
+Users require simple and easy-to-understand cybersecurity learning material.
+Users want practical examples of phishing emails and suspicious links.
+The platform should provide realistic but safe phishing simulations.
+Users want immediate feedback after completing quizzes or simulations.
+Users want to track their learning progress and performance.
+The system should protect user information and provide secure access.
+Observation Findings
+Users prefer a simple and easy-to-navigate interface.
+Learning content should be organized into clear sections.
+Important features such as training, simulations, and quizzes should be easily accessible.
+Users understand cybersecurity concepts better through practical examples.
+Immediate feedback helps users understand their mistakes.
+Questionnaire Findings
+Many users consider phishing attacks a major cybersecurity threat.
+Users expect the platform to be easy to use.
+Security and privacy are considered important by users.
+Interactive quizzes and simulations increase user engagement.
+Users prefer practical learning over only theoretical information.
+Users expect their progress and performance to be available for review.
+User Personas
+
+Persona 1: Regular Internet User
+Age: 22
+Goal: To learn how to identify phishing emails and suspicious links.
+Pain Point: Limited cybersecurity knowledge and difficulty identifying fake messages.
+
+Persona 2: Student
+Age: 20
+Goal: To improve cybersecurity knowledge and learn safe online practices.
+Pain Point: Lack of practical cybersecurity training and real-world examples.
+
+Persona 3: Working Professional
+Age: 30
+Goal: To identify phishing attempts and protect personal and professional information.
+Pain Point: Difficulty identifying sophisticated phishing emails and limited time for cybersecurity training.
+
+User Stories
+
+US1
+User Story: As an end user, I want to register and log in to the platform so that I can securely access my cybersecurity training and personal progress.
+Acceptance Criteria: The user should be able to register and log in successfully using valid credentials. Invalid login attempts should display an appropriate error message.
+
+US2
+User Story: As an end user, I want to access cybersecurity awareness training material so that I can understand phishing attacks and safe online practices.
+Acceptance Criteria: The training material should be clearly displayed and easily accessible to the user.
+
+US3
+User Story: As an end user, I want to participate in phishing simulations so that I can practice identifying suspicious emails, links, and websites.
+Acceptance Criteria: The system should provide safe and realistic phishing scenarios and allow users to select or identify suspicious elements.
+
+US4
+User Story: As an end user, I want to attempt cybersecurity quizzes so that I can evaluate my knowledge and understanding.
+Acceptance Criteria: The system should display quiz questions, accept user answers, and calculate the result correctly.
+
+US5
+User Story: As an end user, I want to receive feedback after completing a quiz or simulation so that I can understand my mistakes and improve my cybersecurity awareness.
+Acceptance Criteria: The system should provide appropriate feedback based on the user's answers and performance.
+
+US6
+User Story: As an end user, I want to view my performance and progress so that I can monitor my improvement over time.
+Acceptance Criteria: The system should display the user's quiz results, simulation performance, and overall progress accurately.
+
+US7
+User Story: As an administrator, I want to manage training content and quizzes so that the learning material can be updated and maintained.
+Acceptance Criteria: The administrator should be able to add, update, and manage training content and quiz questions successfully.
+
+Functional Requirements
+The system shall allow users to register and log in.
+The system shall provide cybersecurity awareness training material.
+The system shall provide information about phishing attacks.
+The system shall provide safe phishing simulations.
+The system shall allow users to identify suspicious emails, links, and websites.
+The system shall provide interactive quizzes.
+The system shall calculate and display quiz results.
+The system shall provide feedback based on user performance.
+The system shall allow users to view their learning progress.
+The administrator shall be able to manage training content and quizzes.
+Non-Functional Requirements
+The system should provide a simple and user-friendly interface.
+The system should provide secure user authentication.
+The system should protect user information.
+The system should provide reliable performance.
+The system should be easily maintainable.
+The system should be scalable for future enhancements.
+The system should provide fast response time.
+The system should be accessible through a web browser.
+The system should provide clear and understandable learning content.
+Requirement Gathering Report
+
+The requirement elicitation process identified users, administrators, developers, testers, and the team leader as important stakeholders of the proposed Cybersecurity Awareness Platform.
+
+Multiple requirement elicitation techniques, including interviews, questionnaires, observation, and user personas, were used to understand stakeholder needs and expectations.
+
+The primary functional requirements identified were user authentication, cybersecurity awareness training, phishing simulations, interactive quizzes, performance assessment, progress tracking, feedback, and administrative management.
+
+The major non-functional requirements included usability, security, reliability, maintainability, scalability, accessibility, and fast response time.
+
+Stakeholder feedback showed that users prefer a simple and interactive platform with practical examples and realistic but safe phishing simulations. Users also expect immediate feedback and the ability to monitor their learning progress.
+
+Therefore, the gathered requirements provide a clear foundation for the design and development of the proposed Cybersecurity Awareness Platform for Phishing Detection and Prevention.
+
+Observation
+
+Using multiple requirement elicitation techniques helps in collecting complete and accurate requirements from different stakeholders. Interviews, questionnaires, observation, and user personas provide different perspectives and reduce ambiguity in the requirements.
+
+The requirement elicitation process helped identify important functional and non-functional requirements for the proposed Cybersecurity Awareness Platform. It also ensured that the system is designed according to user needs and expectations.
+
+Result
+
+The stakeholders of the Cybersecurity Awareness Platform for Phishing Detection and Prevention were successfully identified. Requirements were elicited using suitable techniques such as interviews, questionnaires, observation, and user personas.
+
+Functional and non-functional requirements were identified, user stories with acceptance criteria were prepared, and the Requirement Gathering Report was successfully completed.
