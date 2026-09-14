@@ -1,0 +1,1829 @@
+SOFTWARE REQUIREMENTS SPECIFICATION
+
+FOR
+
+CYBERSECURITY AWARENESS PLATFORM
+FOR PHISHING DETECTION AND PREVENTION
+
+
+Version 1.0
+
+
+Prepared By
+
+Ramjee Chaurasiya
+
+Team Leader
+
+
+Project Team
+
+Ramjee Chaurasiya – Team Leader
+Nitin Jaiswal – Developer
+Lakshay Raj – Tester
+
+
+Domain
+
+Cybersecurity and Information Security
+
+
+Date: September 2026
+
+
+
+
+
+
+REVISION HISTORY
+
+| Version | Date           | Description of Changes | Prepared By       |
+| ------- | -------------- | ---------------------- | ----------------- |
+| 1.0     | September 2026 | Initial SRS Document   | Ramjee Chaurasiya |
+
+
+
+
+TABLE OF CONTENTS
+
+
+1. Introduction
+
+   1.1 Purpose
+
+   1.2 Document Conventions
+
+   1.3 Intended Audience and Reading Suggestions
+
+   1.4 Product Scope
+
+   1.5 References
+
+
+2. Overall Description
+
+   2.1 Product Perspective
+
+   2.2 Product Functions
+
+   2.3 User Classes and Characteristics
+
+   2.4 Operating Environment
+
+   2.5 Design and Implementation Constraints
+
+   2.6 User Documentation
+
+   2.7 Assumptions and Dependencies
+
+
+3. External Interface Requirements
+
+   3.1 User Interfaces
+
+   3.2 Hardware Interfaces
+
+   3.3 Software Interfaces
+
+   3.4 Communications Interfaces
+
+
+4. System Features
+
+   4.1 User Authentication
+
+   4.2 Cybersecurity Awareness Training
+
+   4.3 Phishing Simulation
+
+   4.4 Quiz and Assessment
+
+   4.5 Performance Tracking and Feedback
+
+   4.6 Administrative Management
+
+
+5. Other Nonfunctional Requirements
+
+   5.1 Performance Requirements
+
+   5.2 Safety Requirements
+
+   5.3 Security Requirements
+
+   5.4 Software Quality Attributes
+
+   5.5 Business Rules
+
+
+6. Other Requirements
+
+
+Appendix A: Glossary
+
+Appendix B: Analysis Models
+
+Appendix C: To Be Determined List
+
+
+
+
+1. INTRODUCTION
+
+
+1.1 Purpose
+
+The purpose of this Software Requirements Specification (SRS) document is to define the functional and non-functional requirements of the Cybersecurity Awareness Platform for Phishing Detection and Prevention.
+
+This document describes the features, functionality, system behaviour, interfaces, constraints, and quality requirements of the proposed system.
+
+The Cybersecurity Awareness Platform is designed to improve users' understanding of cybersecurity threats, particularly phishing attacks. The system will provide educational training content, safe phishing simulations, interactive quizzes, performance assessment, progress tracking, and feedback.
+
+This SRS document will serve as a reference for the project team during the design, development, testing, and maintenance of the system.
+
+
+1.2 Document Conventions
+
+The following conventions are used in this SRS document:
+
+• Section headings are numbered according to the structure of the SRS document.
+
+• Functional requirements are identified using unique requirement identifiers such as REQ-1, REQ-2, and so on.
+
+• The word "shall" indicates a mandatory system requirement.
+
+• The word "should" indicates a recommended requirement.
+
+• The terms User, Administrator, System, Training Module, Simulation Module, and Quiz Module are used consistently throughout the document.
+
+• Requirements are organized into functional and non-functional categories for clarity and traceability.
+
+
+1.3 Intended Audience and Reading Suggestions
+
+This SRS document is intended for the following stakeholders:
+
+Project Team:
+The project team will use this document to understand the project requirements and guide the design and development of the system.
+
+Team Leader:
+The Team Leader will use this document for project planning, requirement management, task coordination, and project monitoring.
+
+Developer:
+The Developer will use this document to understand the functional requirements, system features, technical constraints, and software interfaces required for implementation.
+
+Tester:
+The Tester will use this document to prepare test cases and verify whether the implemented system satisfies the specified requirements.
+
+Administrator:
+The Administrator will use the system to manage users, training content, quizzes, and other administrative activities.
+
+End Users:
+End users will use the platform to access cybersecurity training, participate in phishing simulations, attempt quizzes, and view their performance and progress.
+
+The recommended reading sequence is to first read the Introduction and Overall Description sections to understand the system. Developers and testers should then review the External Interface Requirements and System Features. All stakeholders should review the Nonfunctional Requirements.
+
+
+1.4 Product Scope
+
+The Cybersecurity Awareness Platform for Phishing Detection and Prevention is a web-based software system designed to improve cybersecurity awareness among users.
+
+The primary purpose of the system is to educate users about phishing attacks and help them identify suspicious emails, malicious links, fake websites, and other common phishing techniques.
+
+The proposed system will provide the following major features:
+
+• Secure user registration and authentication.
+
+• Cybersecurity awareness training material.
+
+• Information about phishing attacks and phishing techniques.
+
+• Safe and educational phishing simulations.
+
+• Interactive cybersecurity quizzes.
+
+• Quiz result calculation and performance assessment.
+
+• Feedback based on user performance.
+
+• Progress tracking.
+
+• Administrative management of training content and quizzes.
+
+The system aims to provide a practical and interactive learning environment that improves users' ability to recognize phishing attempts and follow safe online practices.
+
+The system does not perform real phishing attacks, malware removal, antivirus scanning, network intrusion detection, or digital forensic investigation.
+
+
+1.5 References
+
+The following references were used while preparing this Software Requirements Specification:
+
+1. Software Requirements Specification template provided in the Software Engineering course material.
+
+2. Experiment 2: Problem Identification and Feasibility for the Cybersecurity Awareness Platform for Phishing Detection and Prevention.
+
+3. Experiment 3: Stakeholder Identification and Requirement Elicitation for the Cybersecurity Awareness Platform for Phishing Detection and Prevention.
+
+4. Project requirements and stakeholder requirements identified by the project team.
+
+
+
+
+
+
+2. OVERALL DESCRIPTION
+
+
+2.1 Product Perspective
+
+The Cybersecurity Awareness Platform for Phishing Detection and Prevention is a web-based software application designed to provide cybersecurity education and practical awareness training to users.
+
+The system will function as an independent web application that allows users to access cybersecurity learning materials, participate in phishing simulations, attempt quizzes, receive feedback, and monitor their learning progress.
+
+The proposed system consists of multiple modules that work together to provide an effective learning environment.
+
+The major components of the system include:
+
+• User Authentication Module
+
+• Cybersecurity Awareness Training Module
+
+• Phishing Simulation Module
+
+• Quiz and Assessment Module
+
+• Performance Tracking Module
+
+• Feedback Module
+
+• Administrative Management Module
+
+
+The User Authentication Module will allow users to register and securely log in to the system.
+
+The Cybersecurity Awareness Training Module will provide educational content related to cybersecurity threats, phishing attacks, suspicious emails, malicious links, fake websites, and safe online practices.
+
+The Phishing Simulation Module will provide safe and educational scenarios that allow users to practice identifying phishing attempts.
+
+The Quiz and Assessment Module will allow users to attempt interactive questions and evaluate their cybersecurity knowledge.
+
+The Performance Tracking Module will store and display user performance and learning progress.
+
+The Feedback Module will provide appropriate feedback to users based on their quiz and simulation performance.
+
+The Administrative Management Module will allow administrators to manage training content, quiz questions, and other system-related information.
+
+The system is designed using a modular approach so that new features can be added in the future without significantly affecting the existing system.
+
+
+2.2 Product Functions
+
+The Cybersecurity Awareness Platform will provide the following major functions:
+
+1. User Registration
+
+The system shall allow new users to register and create an account.
+
+
+2. User Login and Authentication
+
+The system shall allow registered users to securely log in using valid credentials.
+
+
+3. Cybersecurity Awareness Training
+
+The system shall provide educational material related to cybersecurity and common online threats.
+
+
+4. Phishing Awareness
+
+The system shall provide information about phishing attacks, phishing techniques, suspicious emails, malicious links, and fake websites.
+
+
+5. Phishing Simulation
+
+The system shall provide safe phishing simulation scenarios to help users practice identifying phishing attempts.
+
+
+6. Interactive Quiz
+
+The system shall provide cybersecurity-related quizzes to evaluate user knowledge.
+
+
+7. Performance Assessment
+
+The system shall calculate and display user performance based on quiz and simulation results.
+
+
+8. Feedback
+
+The system shall provide feedback to users based on their answers and performance.
+
+
+9. Progress Tracking
+
+The system shall allow users to view their learning progress and previous performance.
+
+
+10. Administrative Management
+
+The system shall allow administrators to manage training content, quiz questions, and other relevant system information.
+
+
+2.3 User Classes and Characteristics
+
+The Cybersecurity Awareness Platform will have different categories of users. Each user class will interact with the system according to its role and permissions.
+
+
+2.3.1 End User
+
+End users are the primary users of the system.
+
+They may include students, regular internet users, and working professionals who want to improve their cybersecurity awareness.
+
+End users will use the system to:
+
+• Register and log in to the platform.
+
+• Access cybersecurity awareness training material.
+
+• Learn about phishing attacks.
+
+• Participate in phishing simulations.
+
+• Attempt cybersecurity quizzes.
+
+• Receive feedback.
+
+• View their performance.
+
+• Monitor their learning progress.
+
+End users are not required to have advanced technical knowledge. Therefore, the system should provide a simple, clear, and user-friendly interface.
+
+
+2.3.2 Administrator
+
+The administrator is responsible for managing the content and activities of the system.
+
+The administrator will be able to:
+
+• Manage training content.
+
+• Add or update cybersecurity learning material.
+
+• Manage quiz questions.
+
+• Monitor relevant user activities.
+
+• Maintain system information.
+
+The administrator is expected to have basic knowledge of the system and its administrative functions.
+
+
+2.3.3 Project Team
+
+The project team consists of the Team Leader, Developer, and Tester.
+
+The Team Leader is responsible for coordinating project activities and monitoring project progress.
+
+The Developer is responsible for implementing the frontend, backend, database, and other technical components of the system.
+
+The Tester is responsible for testing system features, identifying defects, and verifying whether the system meets the specified requirements.
+
+
+2.4 Operating Environment
+
+The Cybersecurity Awareness Platform will operate as a web-based application.
+
+The system can be accessed using a computer or laptop with an internet connection and a supported web browser.
+
+The expected operating environment includes:
+
+Client Side:
+
+• Windows, Linux, or other supported operating systems.
+
+• Modern web browsers such as Google Chrome, Microsoft Edge, or Mozilla Firefox.
+
+• Internet connection.
+
+
+Server Side:
+
+• Node.js runtime environment.
+
+• Express.js for backend application development.
+
+• MongoDB database for storing application data.
+
+
+Development Environment:
+
+• Visual Studio Code.
+
+• Git for version control.
+
+• GitHub for source code management and collaboration.
+
+• Postman for API testing.
+
+
+2.5 Design and Implementation Constraints
+
+The development of the Cybersecurity Awareness Platform may be affected by the following constraints:
+
+
+1. Time Constraint
+
+The project must be completed within the time period specified for the academic project.
+
+
+2. Resource Constraint
+
+The project is being developed by a limited number of team members. Therefore, the available development time and resources are limited.
+
+
+3. Technology Constraint
+
+The system will be developed using the technologies selected by the project team.
+
+The frontend and backend technologies should be compatible with each other and suitable for web application development.
+
+
+4. Security Constraint
+
+The system must follow appropriate security practices for user authentication and data handling.
+
+User credentials and personal information should be handled securely.
+
+
+5. Internet Dependency
+
+Since the system is web-based, users require an internet connection to access the application.
+
+
+6. Simulation Safety Constraint
+
+The phishing simulations provided by the system must be educational and safe.
+
+The system must not perform actual phishing attacks or send malicious content to users.
+
+
+2.6 User Documentation
+
+The Cybersecurity Awareness Platform should provide appropriate documentation and guidance for users.
+
+The user documentation may include:
+
+• Instructions for user registration and login.
+
+• Guidelines for accessing cybersecurity training material.
+
+• Instructions for participating in phishing simulations.
+
+• Instructions for attempting quizzes.
+
+• Information about viewing performance and progress.
+
+• Administrator guidelines for managing training content and quizzes.
+
+The documentation should use simple and clear language so that users with different levels of technical knowledge can understand the system.
+
+
+2.7 Assumptions and Dependencies
+
+The following assumptions are made during the development and operation of the Cybersecurity Awareness Platform:
+
+
+Assumptions:
+
+• Users have access to a computer or other supported device.
+
+• Users have access to a stable internet connection.
+
+• Users have basic knowledge of using a web browser.
+
+• Users will provide valid information during registration.
+
+• Administrators will manage training content and quiz information appropriately.
+
+• Users will use the phishing simulation features only for educational purposes.
+
+
+Dependencies:
+
+• The system depends on the selected web development technologies.
+
+• The system depends on the availability of the database for storing user and application data.
+
+• The system depends on an internet connection for web-based access.
+
+• The system depends on GitHub for source code management and team collaboration.
+
+• The system may depend on third-party libraries and software packages required during development.
+
+Future changes in technologies, software libraries, or database services may require modifications to the system.
+
+
+
+
+
+
+
+PAGE 1
+│
+└── Cover Page
+
+PAGE 2
+│
+└── Revision History
+
+PAGE 3
+│
+└── Table of Contents
+
+PAGE 4 onwards
+│
+├── 1. INTRODUCTION
+│   │
+│   ├── 1.1 Purpose
+│   ├── 1.2 Document Conventions
+│   ├── 1.3 Intended Audience and Reading Suggestions
+│   ├── 1.4 Product Scope
+│   └── 1.5 References
+│
+└── 2. OVERALL DESCRIPTION
+    │
+    ├── 2.1 Product Perspective
+    ├── 2.2 Product Functions
+    ├── 2.3 User Classes and Characteristics
+    │     ├── 2.3.1 End User
+    │     ├── 2.3.2 Administrator
+    │     └── 2.3.3 Project Team
+    │
+    ├── 2.4 Operating Environment
+    ├── 2.5 Design and Implementation Constraints
+    ├── 2.6 User Documentation
+    └── 2.7 Assumptions and Dependencies
+
+
+
+
+
+2. OVERALL DESCRIPTION
+
+
+2.1 Product Perspective
+
+The Cybersecurity Awareness Platform for Phishing Detection and Prevention is a web-based software application designed to provide cybersecurity education and practical awareness training to users.
+
+The system will function as an independent web application that allows users to access cybersecurity learning materials, participate in phishing simulations, attempt quizzes, receive feedback, and monitor their learning progress.
+
+The proposed system consists of multiple modules that work together to provide an effective learning environment.
+
+The major components of the system include:
+
+• User Authentication Module
+
+• Cybersecurity Awareness Training Module
+
+• Phishing Simulation Module
+
+• Quiz and Assessment Module
+
+• Performance Tracking Module
+
+• Feedback Module
+
+• Administrative Management Module
+
+
+The User Authentication Module will allow users to register and securely log in to the system.
+
+The Cybersecurity Awareness Training Module will provide educational content related to cybersecurity threats, phishing attacks, suspicious emails, malicious links, fake websites, and safe online practices.
+
+The Phishing Simulation Module will provide safe and educational scenarios that allow users to practice identifying phishing attempts.
+
+The Quiz and Assessment Module will allow users to attempt interactive questions and evaluate their cybersecurity knowledge.
+
+The Performance Tracking Module will store and display user performance and learning progress.
+
+The Feedback Module will provide appropriate feedback to users based on their quiz and simulation performance.
+
+The Administrative Management Module will allow administrators to manage training content, quiz questions, and other system-related information.
+
+The system is designed using a modular approach so that new features can be added in the future without significantly affecting the existing system.
+
+
+2.2 Product Functions
+
+The Cybersecurity Awareness Platform will provide the following major functions:
+
+1. User Registration
+
+The system shall allow new users to register and create an account.
+
+
+2. User Login and Authentication
+
+The system shall allow registered users to securely log in using valid credentials.
+
+
+3. Cybersecurity Awareness Training
+
+The system shall provide educational material related to cybersecurity and common online threats.
+
+
+4. Phishing Awareness
+
+The system shall provide information about phishing attacks, phishing techniques, suspicious emails, malicious links, and fake websites.
+
+
+5. Phishing Simulation
+
+The system shall provide safe phishing simulation scenarios to help users practice identifying phishing attempts.
+
+
+6. Interactive Quiz
+
+The system shall provide cybersecurity-related quizzes to evaluate user knowledge.
+
+
+7. Performance Assessment
+
+The system shall calculate and display user performance based on quiz and simulation results.
+
+
+8. Feedback
+
+The system shall provide feedback to users based on their answers and performance.
+
+
+9. Progress Tracking
+
+The system shall allow users to view their learning progress and previous performance.
+
+
+10. Administrative Management
+
+The system shall allow administrators to manage training content, quiz questions, and other relevant system information.
+
+
+2.3 User Classes and Characteristics
+
+The Cybersecurity Awareness Platform will have different categories of users. Each user class will interact with the system according to its role and permissions.
+
+
+2.3.1 End User
+
+End users are the primary users of the system.
+
+They may include students, regular internet users, and working professionals who want to improve their cybersecurity awareness.
+
+End users will use the system to:
+
+• Register and log in to the platform.
+
+• Access cybersecurity awareness training material.
+
+• Learn about phishing attacks.
+
+• Participate in phishing simulations.
+
+• Attempt cybersecurity quizzes.
+
+• Receive feedback.
+
+• View their performance.
+
+• Monitor their learning progress.
+
+End users are not required to have advanced technical knowledge. Therefore, the system should provide a simple, clear, and user-friendly interface.
+
+
+2.3.2 Administrator
+
+The administrator is responsible for managing the content and activities of the system.
+
+The administrator will be able to:
+
+• Manage training content.
+
+• Add or update cybersecurity learning material.
+
+• Manage quiz questions.
+
+• Monitor relevant user activities.
+
+• Maintain system information.
+
+The administrator is expected to have basic knowledge of the system and its administrative functions.
+
+
+2.3.3 Project Team
+
+The project team consists of the Team Leader, Developer, and Tester.
+
+The Team Leader is responsible for coordinating project activities and monitoring project progress.
+
+The Developer is responsible for implementing the frontend, backend, database, and other technical components of the system.
+
+The Tester is responsible for testing system features, identifying defects, and verifying whether the system meets the specified requirements.
+
+
+2.4 Operating Environment
+
+The Cybersecurity Awareness Platform will operate as a web-based application.
+
+The system can be accessed using a computer or laptop with an internet connection and a supported web browser.
+
+The expected operating environment includes:
+
+Client Side:
+
+• Windows, Linux, or other supported operating systems.
+
+• Modern web browsers such as Google Chrome, Microsoft Edge, or Mozilla Firefox.
+
+• Internet connection.
+
+
+Server Side:
+
+• Node.js runtime environment.
+
+• Express.js for backend application development.
+
+• MongoDB database for storing application data.
+
+
+Development Environment:
+
+• Visual Studio Code.
+
+• Git for version control.
+
+• GitHub for source code management and collaboration.
+
+• Postman for API testing.
+
+
+2.5 Design and Implementation Constraints
+
+The development of the Cybersecurity Awareness Platform may be affected by the following constraints:
+
+
+1. Time Constraint
+
+The project must be completed within the time period specified for the academic project.
+
+
+2. Resource Constraint
+
+The project is being developed by a limited number of team members. Therefore, the available development time and resources are limited.
+
+
+3. Technology Constraint
+
+The system will be developed using the technologies selected by the project team.
+
+The frontend and backend technologies should be compatible with each other and suitable for web application development.
+
+
+4. Security Constraint
+
+The system must follow appropriate security practices for user authentication and data handling.
+
+User credentials and personal information should be handled securely.
+
+
+5. Internet Dependency
+
+Since the system is web-based, users require an internet connection to access the application.
+
+
+6. Simulation Safety Constraint
+
+The phishing simulations provided by the system must be educational and safe.
+
+The system must not perform actual phishing attacks or send malicious content to users.
+
+
+2.6 User Documentation
+
+The Cybersecurity Awareness Platform should provide appropriate documentation and guidance for users.
+
+The user documentation may include:
+
+• Instructions for user registration and login.
+
+• Guidelines for accessing cybersecurity training material.
+
+• Instructions for participating in phishing simulations.
+
+• Instructions for attempting quizzes.
+
+• Information about viewing performance and progress.
+
+• Administrator guidelines for managing training content and quizzes.
+
+The documentation should use simple and clear language so that users with different levels of technical knowledge can understand the system.
+
+
+2.7 Assumptions and Dependencies
+
+The following assumptions are made during the development and operation of the Cybersecurity Awareness Platform:
+
+
+Assumptions:
+
+• Users have access to a computer or other supported device.
+
+• Users have access to a stable internet connection.
+
+• Users have basic knowledge of using a web browser.
+
+• Users will provide valid information during registration.
+
+• Administrators will manage training content and quiz information appropriately.
+
+• Users will use the phishing simulation features only for educational purposes.
+
+
+Dependencies:
+
+• The system depends on the selected web development technologies.
+
+• The system depends on the availability of the database for storing user and application data.
+
+• The system depends on an internet connection for web-based access.
+
+• The system depends on GitHub for source code management and team collaboration.
+
+• The system may depend on third-party libraries and software packages required during development.
+
+Future changes in technologies, software libraries, or database services may require modifications to the system.
+
+
+
+
+
+
+PAGE 1
+│
+└── Cover Page
+
+PAGE 2
+│
+└── Revision History
+
+PAGE 3
+│
+└── Table of Contents
+
+PAGE 4 onwards
+│
+├── 1. INTRODUCTION
+│   │
+│   ├── 1.1 Purpose
+│   ├── 1.2 Document Conventions
+│   ├── 1.3 Intended Audience and Reading Suggestions
+│   ├── 1.4 Product Scope
+│   └── 1.5 References
+│
+└── 2. OVERALL DESCRIPTION
+    │
+    ├── 2.1 Product Perspective
+    ├── 2.2 Product Functions
+    ├── 2.3 User Classes and Characteristics
+    │     ├── 2.3.1 End User
+    │     ├── 2.3.2 Administrator
+    │     └── 2.3.3 Project Team
+    │
+    ├── 2.4 Operating Environment
+    ├── 2.5 Design and Implementation Constraints
+    ├── 2.6 User Documentation
+    └── 2.7 Assumptions and Dependencies
+
+
+
+
+
+
+
+    4. SYSTEM FEATURES
+
+
+4.1 User Authentication
+
+
+4.1.1 Description and Priority
+
+The User Authentication feature allows users to register and securely access the Cybersecurity Awareness Platform.
+
+The system will allow new users to create an account and existing users to log in using valid credentials.
+
+Authentication is required to provide personalized access to training content, quizzes, simulation activities, performance records, and learning progress.
+
+Priority: High
+
+
+4.1.2 Stimulus/Response Sequence
+
+Stimulus:
+
+The user enters the registration or login information and submits the request.
+
+Response:
+
+The system validates the provided information.
+
+If the registration information is valid, the system creates a new user account.
+
+If the login credentials are valid, the system grants access to the user dashboard.
+
+If the information or credentials are invalid, the system displays an appropriate error message.
+
+
+4.1.3 Functional Requirements
+
+REQ-1: The system shall allow a new user to register and create an account.
+
+REQ-2: The system shall validate the required information during user registration.
+
+REQ-3: The system shall allow registered users to log in using valid credentials.
+
+REQ-4: The system shall validate user credentials before granting access.
+
+REQ-5: The system shall display an appropriate error message when invalid login credentials are provided.
+
+REQ-6: The system shall provide authenticated users with access to their authorized features.
+
+REQ-7: The system shall restrict unauthorized users from accessing protected features.
+
+
+4.2 Cybersecurity Awareness Training
+
+
+4.2.1 Description and Priority
+
+The Cybersecurity Awareness Training feature provides educational content to improve users' understanding of cybersecurity threats and safe online practices.
+
+The training module will provide information about cybersecurity fundamentals, phishing attacks, suspicious emails, malicious links, fake websites, password security, and other relevant cybersecurity topics.
+
+The purpose of this feature is to provide users with clear and understandable cybersecurity awareness material.
+
+Priority: High
+
+
+4.2.2 Stimulus/Response Sequence
+
+Stimulus:
+
+The user selects a cybersecurity training topic.
+
+Response:
+
+The system retrieves the requested training content and displays it to the user.
+
+The user can read and navigate through the available learning material.
+
+The system may record the completion or progress of the training activity.
+
+
+4.2.3 Functional Requirements
+
+REQ-8: The system shall provide cybersecurity awareness training material.
+
+REQ-9: The system shall organize training content into different cybersecurity topics.
+
+REQ-10: The system shall provide information about common cybersecurity threats.
+
+REQ-11: The system shall provide information about phishing attacks and phishing techniques.
+
+REQ-12: The system shall provide information about suspicious emails and malicious links.
+
+REQ-13: The system shall provide information about safe online practices.
+
+REQ-14: The system shall allow users to access and navigate between available training topics.
+
+
+4.3 Phishing Simulation
+
+
+4.3.1 Description and Priority
+
+The Phishing Simulation feature provides users with safe and educational scenarios that simulate common phishing attempts.
+
+The purpose of this feature is to allow users to practice identifying suspicious emails, malicious links, fake websites, and other phishing indicators.
+
+The simulations are intended only for cybersecurity education and awareness.
+
+The system will not perform real phishing attacks or distribute malicious content.
+
+Priority: High
+
+
+4.3.2 Stimulus/Response Sequence
+
+Stimulus:
+
+The user selects a phishing simulation activity.
+
+Response:
+
+The system displays a simulated phishing scenario.
+
+The user analyzes the provided information and identifies suspicious elements or selects an appropriate answer.
+
+The system evaluates the user's response and displays appropriate feedback.
+
+
+4.3.3 Functional Requirements
+
+REQ-15: The system shall provide safe phishing simulation scenarios.
+
+REQ-16: The system shall provide simulated examples of phishing emails.
+
+REQ-17: The system shall provide simulated examples of suspicious or malicious links for educational purposes.
+
+REQ-18: The system shall provide simulated examples of fake websites or suspicious web pages for educational purposes.
+
+REQ-19: The system shall allow users to identify suspicious elements in a phishing scenario.
+
+REQ-20: The system shall evaluate the user's response to a phishing simulation.
+
+REQ-21: The system shall provide feedback based on the user's simulation performance.
+
+REQ-22: The system shall ensure that all phishing simulations are educational and do not perform actual phishing attacks.
+
+
+4.4 Quiz and Assessment
+
+
+4.4.1 Description and Priority
+
+The Quiz and Assessment feature allows users to evaluate their cybersecurity knowledge through interactive questions.
+
+The quiz may include questions related to cybersecurity fundamentals, phishing attacks, suspicious emails, malicious links, fake websites, and safe online practices.
+
+The system will evaluate user responses and calculate the quiz results.
+
+Priority: High
+
+
+4.4.2 Stimulus/Response Sequence
+
+Stimulus:
+
+The user selects a quiz and submits answers to the displayed questions.
+
+Response:
+
+The system records the user's answers.
+
+After quiz submission, the system evaluates the answers.
+
+The system calculates the user's score and displays the result.
+
+The system provides appropriate feedback based on the user's performance.
+
+
+4.4.3 Functional Requirements
+
+REQ-23: The system shall provide cybersecurity-related quizzes.
+
+REQ-24: The system shall display quiz questions to the user.
+
+REQ-25: The system shall allow users to select or submit answers to quiz questions.
+
+REQ-26: The system shall evaluate the submitted quiz answers.
+
+REQ-27: The system shall calculate the user's quiz score.
+
+REQ-28: The system shall display the quiz result to the user.
+
+REQ-29: The system shall provide feedback based on the user's quiz performance.
+
+REQ-30: The system shall store quiz results for future performance tracking.
+
+
+4.5 Performance Tracking and Feedback
+
+
+4.5.1 Description and Priority
+
+The Performance Tracking and Feedback feature allows users to monitor their cybersecurity learning progress.
+
+The system will store relevant quiz and simulation results and provide feedback based on the user's performance.
+
+This feature helps users identify their strengths and areas that require improvement.
+
+Priority: Medium
+
+
+4.5.2 Stimulus/Response Sequence
+
+Stimulus:
+
+The user completes a quiz, training activity, or phishing simulation.
+
+Response:
+
+The system records the relevant performance information.
+
+The system calculates or updates the user's progress.
+
+The system displays performance information and appropriate feedback.
+
+The user can view the available performance and progress records.
+
+
+4.5.3 Functional Requirements
+
+REQ-31: The system shall record relevant user performance information.
+
+REQ-32: The system shall store quiz results.
+
+REQ-33: The system shall store relevant phishing simulation results.
+
+REQ-34: The system shall display the user's quiz performance.
+
+REQ-35: The system shall display the user's simulation performance.
+
+REQ-36: The system shall allow users to view their learning progress.
+
+REQ-37: The system shall provide feedback based on user performance.
+
+REQ-38: The system shall provide information that helps users identify areas for improvement.
+
+
+4.6 Administrative Management
+
+
+4.6.1 Description and Priority
+
+The Administrative Management feature allows authorized administrators to manage important system content and information.
+
+Administrators will be responsible for maintaining cybersecurity training material and quiz-related information.
+
+This feature ensures that the educational content of the platform can be updated and maintained.
+
+Priority: Medium
+
+
+4.6.2 Stimulus/Response Sequence
+
+Stimulus:
+
+The administrator logs in and accesses the administrative functions.
+
+Response:
+
+The system verifies the administrator's authorization.
+
+The system provides access to administrative features.
+
+The administrator can manage training content and quiz-related information.
+
+The system validates and stores the changes made by the administrator.
+
+
+4.6.3 Functional Requirements
+
+REQ-39: The system shall provide authorized administrators with access to administrative functions.
+
+REQ-40: The system shall allow administrators to manage cybersecurity training content.
+
+REQ-41: The system shall allow administrators to add new training material.
+
+REQ-42: The system shall allow administrators to update existing training material.
+
+REQ-43: The system shall allow administrators to manage quiz questions.
+
+REQ-44: The system shall validate administrative changes before storing the updated information.
+
+REQ-45: The system shall store and retrieve administrative content changes appropriately.
+
+
+
+
+
+4. SYSTEM FEATURES
+│
+├── 4.1 User Authentication
+│   ├── Description and Priority
+│   ├── Stimulus/Response Sequence
+│   └── Functional Requirements
+│
+├── 4.2 Cybersecurity Awareness Training
+│   ├── Description and Priority
+│   ├── Stimulus/Response Sequence
+│   └── Functional Requirements
+│
+├── 4.3 Phishing Simulation
+│   ├── Description and Priority
+│   ├── Stimulus/Response Sequence
+│   └── Functional Requirements
+│
+├── 4.4 Quiz and Assessment
+│   ├── Description and Priority
+│   ├── Stimulus/Response Sequence
+│   └── Functional Requirements
+│
+├── 4.5 Performance Tracking and Feedback
+│   ├── Description and Priority
+│   ├── Stimulus/Response Sequence
+│   └── Functional Requirements
+│
+└── 4.6 Administrative Management
+    ├── Description and Priority
+    ├── Stimulus/Response Sequence
+    └── Functional Requirements
+
+
+
+
+
+
+    5. OTHER NONFUNCTIONAL REQUIREMENTS
+
+
+5.1 Performance Requirements
+
+The Cybersecurity Awareness Platform should provide acceptable performance while users access different features of the system.
+
+The system should respond efficiently to user requests such as login, training content access, phishing simulations, quiz submission, and performance tracking.
+
+The following performance requirements are identified:
+
+NFR-1: The system shall provide a reasonable response time for user requests under normal operating conditions.
+
+NFR-2: The system shall process user login requests and display the appropriate result without unnecessary delay.
+
+NFR-3: The system shall retrieve and display cybersecurity training content efficiently.
+
+NFR-4: The system shall load phishing simulation scenarios within an acceptable time.
+
+NFR-5: The system shall process quiz submissions and calculate quiz results correctly.
+
+NFR-6: The system shall retrieve and display user performance and progress information efficiently.
+
+NFR-7: The system should support multiple users accessing the system under normal expected usage conditions.
+
+NFR-8: The system should maintain acceptable performance as the amount of training content, quiz data, and user information increases.
+
+
+5.2 Safety Requirements
+
+The Cybersecurity Awareness Platform is an educational software system and does not directly control physical hardware or perform operations that may cause physical harm.
+
+However, the system must ensure that cybersecurity training and phishing simulations are safe for users.
+
+The following safety requirements are identified:
+
+NFR-9: The system shall provide phishing simulations only for educational and awareness purposes.
+
+NFR-10: The system shall not perform actual phishing attacks.
+
+NFR-11: The system shall not send malicious emails or harmful links to users.
+
+NFR-12: The system shall not distribute malware, viruses, or other malicious software.
+
+NFR-13: The system shall clearly distinguish simulated phishing scenarios from real cybersecurity threats.
+
+NFR-14: The system should provide appropriate information to prevent users from misunderstanding simulation activities.
+
+NFR-15: The system shall ensure that educational content does not intentionally expose users to harmful or unsafe activities.
+
+
+5.3 Security Requirements
+
+Security is an important requirement of the Cybersecurity Awareness Platform because the system stores user information, authentication-related data, performance records, and other application data.
+
+The system should implement appropriate security practices to protect user information and prevent unauthorized access.
+
+The following security requirements are identified:
+
+NFR-16: The system shall require user authentication before allowing access to protected features.
+
+NFR-17: The system shall validate user credentials before granting access.
+
+NFR-18: The system shall restrict unauthorized users from accessing protected resources.
+
+NFR-19: The system shall implement appropriate access control for administrator functions.
+
+NFR-20: The system shall validate user input before processing it.
+
+NFR-21: The system should store user passwords securely and should not store passwords in plain text.
+
+NFR-22: The system should protect sensitive user information from unauthorized access.
+
+NFR-23: The system should use secure communication practices when deployed in a production environment.
+
+NFR-24: The system should use HTTPS for secure communication between the client and server in a production environment.
+
+NFR-25: The system shall provide appropriate error messages without exposing sensitive system information.
+
+NFR-26: The system should protect the application against common unauthorized access attempts.
+
+
+5.4 Software Quality Attributes
+
+
+5.4.1 Usability
+
+The system should be easy to understand and use.
+
+The user interface should be designed for users with different levels of cybersecurity and technical knowledge.
+
+NFR-27: The system shall provide a simple and user-friendly interface.
+
+NFR-28: The system shall provide clear navigation between different features.
+
+NFR-29: The system shall display information in a clear and understandable manner.
+
+NFR-30: The system should provide clear instructions for using training, simulation, and quiz features.
+
+NFR-31: The system should display appropriate feedback and error messages.
+
+
+5.4.2 Reliability
+
+The system should operate reliably under normal conditions.
+
+NFR-32: The system shall perform the specified functions correctly.
+
+NFR-33: The system shall calculate quiz results accurately.
+
+NFR-34: The system shall store and retrieve application data correctly.
+
+NFR-35: The system should maintain data consistency during normal operation.
+
+NFR-36: The system should handle invalid user input appropriately.
+
+
+5.4.3 Maintainability
+
+The system should be easy to maintain and modify.
+
+A modular system structure will make it easier to update or improve individual features.
+
+NFR-37: The system should be designed using a modular architecture.
+
+NFR-38: The system should allow individual modules to be updated without significantly affecting unrelated modules.
+
+NFR-39: The source code should be properly organized and documented.
+
+NFR-40: The project should use version control for source code management.
+
+
+5.4.4 Scalability
+
+The system should support future expansion.
+
+New cybersecurity topics, training materials, simulation scenarios, and quizzes may be added in the future.
+
+NFR-41: The system should support the addition of new training content.
+
+NFR-42: The system should support the addition of new phishing simulation scenarios.
+
+NFR-43: The system should support the addition of new quiz questions and quizzes.
+
+NFR-44: The system architecture should support future feature enhancements.
+
+
+5.4.5 Availability
+
+The system should be available to users when the application is operational.
+
+NFR-45: The system should be accessible through a supported web browser.
+
+NFR-46: The system should be available whenever the server and required services are operational.
+
+NFR-47: The system should handle temporary service failures appropriately.
+
+
+5.5 Business Rules
+
+The following business rules apply to the Cybersecurity Awareness Platform:
+
+BR-1: Only registered users shall be allowed to access personalized features of the system.
+
+BR-2: Users must provide valid credentials to access protected areas of the application.
+
+BR-3: Only authorized administrators shall be allowed to access administrative functions.
+
+BR-4: Phishing simulations shall be used only for cybersecurity education and awareness.
+
+BR-5: The system shall not perform real phishing attacks.
+
+BR-6: The system shall not distribute malicious content, malware, or harmful links.
+
+BR-7: Quiz results shall be calculated based on the user's submitted answers.
+
+BR-8: User performance information shall be associated with the appropriate user account.
+
+BR-9: Training content and quiz questions shall be managed by authorized administrators.
+
+BR-10: Users should follow the intended educational purpose of the platform.
+
+
+
+
+
+
+
+
+5. OTHER NONFUNCTIONAL REQUIREMENTS
+│
+├── 5.1 Performance Requirements
+│
+├── 5.2 Safety Requirements
+│
+├── 5.3 Security Requirements
+│
+├── 5.4 Software Quality Attributes
+│   │
+│   ├── 5.4.1 Usability
+│   ├── 5.4.2 Reliability
+│   ├── 5.4.3 Maintainability
+│   ├── 5.4.4 Scalability
+│   └── 5.4.5 Availability
+│
+└── 5.5 Business Rules
+
+
+
+
+
+
+
+
+
+6. OTHER REQUIREMENTS
+
+
+6.1 Data Requirements
+
+The Cybersecurity Awareness Platform requires the storage and management of different types of application data.
+
+The major data requirements include:
+
+• User registration information.
+
+• User authentication information.
+
+• User profile information.
+
+• Cybersecurity training content.
+
+• Phishing simulation scenarios.
+
+• Quiz questions and answers.
+
+• User quiz results.
+
+• User simulation results.
+
+• User learning progress.
+
+• Administrative content information.
+
+The system should store the required data in an organized manner and allow authorized components of the system to retrieve and update the data when required.
+
+
+6.2 Backup and Recovery Requirements
+
+The application data should be protected against accidental loss or corruption.
+
+The system should support appropriate backup and recovery mechanisms when deployed in a production environment.
+
+The following requirements are identified:
+
+NFR-48: The system should support backup of important application data.
+
+NFR-49: The system should allow recovery of important data when backup information is available.
+
+NFR-50: The system should maintain data consistency during data storage and recovery operations.
+
+
+6.3 Future Enhancement Requirements
+
+The proposed system may be enhanced in the future based on user requirements and technological developments.
+
+Possible future enhancements include:
+
+• Advanced phishing simulation scenarios.
+
+• Personalized cybersecurity learning recommendations.
+
+• Detailed performance analytics.
+
+• Graphical progress reports.
+
+• Certificate generation after successful completion of training.
+
+• Email notifications and reminders.
+
+• Multi-language support.
+
+• Additional cybersecurity awareness topics.
+
+• Integration with other educational or training platforms.
+
+• Mobile application support.
+
+
+APPENDIX A: GLOSSARY
+
+
+Administrator
+
+An authorized user who manages training content, quiz questions, and other administrative functions of the system.
+
+
+Authentication
+
+The process of verifying the identity of a user before granting access to the system.
+
+
+Cybersecurity
+
+The practice of protecting computer systems, networks, applications, and information from digital threats and unauthorized access.
+
+
+Dashboard
+
+A user interface that provides access to the main features and information of the application.
+
+
+Database
+
+A structured collection of data used by the application to store and retrieve information.
+
+
+End User
+
+A person who uses the Cybersecurity Awareness Platform for learning and improving cybersecurity awareness.
+
+
+Feedback
+
+Information provided by the system to help users understand their performance and identify areas for improvement.
+
+
+Frontend
+
+The part of the application that users interact with directly through the web interface.
+
+
+Backend
+
+The server-side part of the application responsible for processing requests, implementing business logic, and communicating with the database.
+
+
+HTTPS
+
+Hypertext Transfer Protocol Secure. A secure version of HTTP used for communication between a client and a server.
+
+
+Malicious Link
+
+A link designed to redirect users to harmful, fraudulent, or unauthorized web content.
+
+
+Phishing
+
+A type of cyber attack in which attackers attempt to trick users into revealing sensitive information or performing unsafe actions.
+
+
+Phishing Simulation
+
+A safe and educational activity that simulates phishing-related scenarios to help users identify phishing attempts.
+
+
+Quiz
+
+An interactive set of questions used to evaluate a user's knowledge and understanding.
+
+
+Requirement
+
+A condition, capability, or feature that the software system must provide.
+
+
+SRS
+
+Software Requirements Specification. A document that defines the functional and non-functional requirements of a software system.
+
+
+Training Module
+
+A module of the application that provides cybersecurity awareness and educational content.
+
+
+User
+
+A person who interacts with the Cybersecurity Awareness Platform.
+
+
+User Interface
+
+The part of the system through which users interact with the application.
+
+
+APPENDIX B: ANALYSIS MODELS
+
+
+B.1 Use Case Model
+
+The Cybersecurity Awareness Platform involves the following primary actors:
+
+1. End User
+
+The End User can perform the following activities:
+
+• Register an account.
+
+• Log in to the system.
+
+• Access cybersecurity awareness training.
+
+• View phishing-related learning content.
+
+• Participate in phishing simulations.
+
+• Attempt cybersecurity quizzes.
+
+• View quiz results.
+
+• Receive feedback.
+
+• View performance.
+
+• Track learning progress.
+
+
+2. Administrator
+
+The Administrator can perform the following activities:
+
+• Log in to the system.
+
+• Manage training content.
+
+• Add cybersecurity learning material.
+
+• Update cybersecurity learning material.
+
+• Manage quiz questions.
+
+• Monitor relevant system information.
+
+
+B.2 System Interaction Overview
+
+The general interaction between the user and the system is as follows:
+
+End User
+    ↓
+Registration / Login
+    ↓
+User Authentication
+    ↓
+User Dashboard
+    ↓
+Select Feature
+    ↓
+────────────────────────────────────
+↓              ↓              ↓
+Training    Simulation       Quiz
+↓              ↓              ↓
+Learning     Identify         Submit
+Content      Phishing         Answers
+↓              ↓              ↓
+────────────────────────────────────
+                ↓
+        Performance Assessment
+                ↓
+             Feedback
+                ↓
+         Progress Tracking
+
+
+B.3 High-Level System Model
+
+The high-level architecture of the proposed system consists of the following components:
+
+User
+   ↓
+Web Browser
+   ↓
+Frontend Application
+   ↓
+Backend Server
+   ↓
+Database
+
+
+The frontend application provides the user interface.
+
+The backend server processes requests and implements application logic.
+
+The database stores user information, training content, quiz questions, simulation data, performance records, and progress information.
+
+
+APPENDIX C: TO BE DETERMINED LIST
+
+
+The following items may require further discussion and finalization during the design and development phases of the project:
+
+TBD-1: The exact design and layout of the user interface.
+
+TBD-2: The exact number of cybersecurity training modules.
+
+TBD-3: The exact number and type of phishing simulation scenarios.
+
+TBD-4: The final structure and number of quiz questions.
+
+TBD-5: The detailed method used for calculating user performance.
+
+TBD-6: The exact format of feedback and learning recommendations.
+
+TBD-7: The final database schema and data model.
+
+TBD-8: The exact authentication mechanism to be used.
+
+TBD-9: The final deployment platform for the application.
+
+TBD-10: The exact technologies and third-party libraries required for the final implementation.
+
+
+
+
+
+
+COVER PAGE
+│
+├── SOFTWARE REQUIREMENTS SPECIFICATION
+├── Project Title
+├── Version
+└── Project Team
+     │
+     ↓
+REVISION HISTORY
+     │
+     ↓
+TABLE OF CONTENTS
+     │
+     ↓
+1. INTRODUCTION
+│   ├── 1.1 Purpose
+│   ├── 1.2 Document Conventions
+│   ├── 1.3 Intended Audience and Reading Suggestions
+│   ├── 1.4 Product Scope
+│   └── 1.5 References
+│
+2. OVERALL DESCRIPTION
+│   ├── 2.1 Product Perspective
+│   ├── 2.2 Product Functions
+│   ├── 2.3 User Classes and Characteristics
+│   ├── 2.4 Operating Environment
+│   ├── 2.5 Design and Implementation Constraints
+│   ├── 2.6 User Documentation
+│   └── 2.7 Assumptions and Dependencies
+│
+3. EXTERNAL INTERFACE REQUIREMENTS
+│   ├── 3.1 User Interfaces
+│   ├── 3.2 Hardware Interfaces
+│   ├── 3.3 Software Interfaces
+│   └── 3.4 Communications Interfaces
+│
+4. SYSTEM FEATURES
+│   ├── 4.1 User Authentication
+│   ├── 4.2 Cybersecurity Awareness Training
+│   ├── 4.3 Phishing Simulation
+│   ├── 4.4 Quiz and Assessment
+│   ├── 4.5 Performance Tracking and Feedback
+│   └── 4.6 Administrative Management
+│
+5. OTHER NONFUNCTIONAL REQUIREMENTS
+│   ├── 5.1 Performance Requirements
+│   ├── 5.2 Safety Requirements
+│   ├── 5.3 Security Requirements
+│   ├── 5.4 Software Quality Attributes
+│   └── 5.5 Business Rules
+│
+6. OTHER REQUIREMENTS
+│   ├── 6.1 Data Requirements
+│   ├── 6.2 Backup and Recovery Requirements
+│   └── 6.3 Future Enhancement Requirements
+│
+APPENDIX A: GLOSSARY
+│
+APPENDIX B: ANALYSIS MODELS
+│
+└── APPENDIX C: TO BE DETERMINED LIST
