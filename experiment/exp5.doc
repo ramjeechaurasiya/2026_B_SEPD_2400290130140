@@ -1,0 +1,355 @@
+# SESSION 5: UML USE CASE MODELING
+
+**Project Title:** Cybersecurity Awareness Platform for Phishing Detection and Prevention
+
+**Domain:** Cybersecurity and Information Security
+
+**Prepared By:** Ramjee Chaurasiya
+
+**Role:** Team Leader
+
+## 1. Aim
+
+To identify the use cases of the Cybersecurity Awareness Platform for Phishing Detection and Prevention, create a UML Use Case Diagram, and prepare detailed use case descriptions to represent the functional requirements of the proposed system.
+
+## 2. Objectives
+
+- Identify the actors interacting with the proposed system.
+- Identify and classify the major use cases.
+- Create a UML Use Case Diagram using Draw.io or StarUML.
+- Define the interactions between actors and system functions.
+- Prepare use case description templates and narratives.
+- Map the identified use cases to the requirements of the proposed software system.
+
+## 3. Introduction
+
+UML (Unified Modeling Language) is a standard modeling language used to visualize, specify, and document software systems. Use Case Modeling is a UML technique that represents the functional requirements of a system from the perspective of its users.
+
+A Use Case Diagram identifies the actors, use cases, and system boundary. Actors represent external entities that interact with the system, while use cases represent the services or functions provided by the system.
+
+The proposed Cybersecurity Awareness Platform for Phishing Detection and Prevention aims to improve users' cybersecurity awareness through educational training, phishing simulations, quizzes, performance assessment, and feedback.
+
+Use Case Modeling helps define how users interact with the platform and provides a clear foundation for subsequent software design, development, and testing.
+
+## 4. Use Case Identification
+
+### 4.1 Actors
+
+**Actor 1: End User**
+
+The End User is the primary actor who uses the platform to improve cybersecurity awareness.
+
+Responsibilities:
+- Register and log in.
+- Access cybersecurity training.
+- Learn about phishing attacks.
+- Participate in safe phishing simulations.
+- Attempt cybersecurity quizzes.
+- View results and learning progress.
+- Receive performance feedback.
+
+**Actor 2: Administrator**
+
+The Administrator manages the educational content and quiz information of the platform.
+
+Responsibilities:
+- Log in using authorized credentials.
+- Add or update cybersecurity training material.
+- Manage quiz questions.
+- Maintain relevant educational content.
+
+### 4.2 Identified Use Cases
+
+| Use Case ID | Use Case Name | Primary Actor |
+|---|---|---|
+| UC-01 | Register Account | End User |
+| UC-02 | Log In | End User, Administrator |
+| UC-03 | Access Cybersecurity Training | End User |
+| UC-04 | Learn About Phishing | End User |
+| UC-05 | Participate in Phishing Simulation | End User |
+| UC-06 | Attempt Cybersecurity Quiz | End User |
+| UC-07 | View Results and Progress | End User |
+| UC-08 | Receive Performance Feedback | End User |
+| UC-09 | Manage Training Content | Administrator |
+| UC-10 | Manage Quiz Questions | Administrator |
+
+These use cases represent the proposed functional scope of the platform and should be verified against the actual application before being treated as implemented functionality.
+
+## 5. Use Case Diagram
+
+The Use Case Diagram represents the interaction between the End User, Administrator, and the Cybersecurity Awareness Platform.
+
+The End User interacts with training, phishing awareness, simulation, quiz, results, and feedback functions. The Administrator interacts with training content and quiz management functions.
+
+**Diagram tool:** Draw.io or StarUML.
+
+**Diagram title:** UML Use Case Diagram — Cybersecurity Awareness Platform for Phishing Detection and Prevention.
+
+Insert the completed diagram below this section.
+
+## 6. Use Case Description Templates
+
+Each use case is documented using the following template:
+
+- **Use Case ID:** Unique identifier of the use case.
+- **Use Case Name:** Name of the function.
+- **Primary Actor:** Main actor interacting with the system.
+- **Goal:** Purpose of the use case.
+- **Preconditions:** Conditions that must be satisfied before execution.
+- **Trigger:** Event that initiates the use case.
+- **Main Flow:** Normal sequence of interactions.
+- **Alternative Flow:** Alternative or exceptional sequence.
+- **Postconditions:** State of the system after execution.
+
+## 7. Use Case Narratives
+
+### UC-01: Register Account
+
+**Primary Actor:** End User
+
+**Goal:** Create a new user account.
+
+**Preconditions:** The user does not already have an account and can access the registration page.
+
+**Trigger:** The user selects the registration option.
+
+**Main Flow:**
+1. The user opens the registration page.
+2. The user enters the required registration information.
+3. The system validates the submitted information.
+4. The system creates the account if the information is valid.
+5. The system displays a confirmation message.
+
+**Alternative Flow:**
+- If required information is missing or invalid, the system displays an appropriate error message.
+- If the account already exists, the system informs the user.
+
+**Postconditions:** A new user account is created successfully, or the user is informed that registration failed.
+
+### UC-02: Log In
+
+**Primary Actor:** End User or Administrator
+
+**Goal:** Access the system using valid credentials.
+
+**Preconditions:** The actor has a registered account with the required access permissions.
+
+**Trigger:** The actor submits login credentials.
+
+**Main Flow:**
+1. The actor opens the login page.
+2. The actor enters the required credentials.
+3. The system validates the credentials.
+4. The system verifies the actor's access permissions.
+5. The system opens the appropriate authorized interface.
+
+**Alternative Flow:**
+- If credentials are invalid, the system displays an error message.
+- If access is not authorized, the system denies access to the restricted functionality.
+
+**Postconditions:** The authorized actor gains access to the appropriate system functions.
+
+### UC-03: Access Cybersecurity Training
+
+**Primary Actor:** End User
+
+**Goal:** Learn cybersecurity concepts and safe online practices.
+
+**Preconditions:** The training content is available.
+
+**Trigger:** The user selects a training topic.
+
+**Main Flow:**
+1. The user opens the training section.
+2. The system displays the available training topics.
+3. The user selects a topic.
+4. The system displays the corresponding learning material.
+5. The user reads and navigates through the content.
+
+**Alternative Flow:**
+- If the selected content is unavailable, the system displays an appropriate message.
+
+**Postconditions:** The selected training content is displayed to the user.
+
+### UC-04: Participate in Phishing Simulation
+
+**Primary Actor:** End User
+
+**Goal:** Practice identifying phishing indicators in safe simulated scenarios.
+
+**Preconditions:** A simulation scenario is available.
+
+**Trigger:** The user selects a phishing simulation.
+
+**Main Flow:**
+1. The system displays an educational phishing scenario.
+2. The user examines the simulated message or website.
+3. The user identifies suspicious elements or selects an answer.
+4. The system evaluates the response.
+5. The system displays the result and relevant feedback.
+
+**Alternative Flow:**
+- If the simulation is unavailable, the system informs the user.
+- If the user submits an invalid response, the system requests a valid response where applicable.
+
+**Postconditions:** The simulation outcome is displayed. The result may be recorded if performance tracking is supported.
+
+**Safety Constraint:** The scenario is educational and must not perform an actual phishing attack.
+
+### UC-05: Attempt Cybersecurity Quiz
+
+**Primary Actor:** End User
+
+**Goal:** Evaluate knowledge of cybersecurity and phishing prevention.
+
+**Preconditions:** A quiz is available.
+
+**Trigger:** The user selects a quiz.
+
+**Main Flow:**
+1. The system displays the quiz questions.
+2. The user selects answers.
+3. The user submits the quiz.
+4. The system evaluates the submitted answers.
+5. The system calculates and displays the score.
+6. The system provides feedback where supported.
+
+**Alternative Flow:**
+- If answers are incomplete, the system handles them according to the quiz rules.
+- If quiz submission fails, the system displays an appropriate message.
+
+**Postconditions:** The quiz result is displayed and may be stored for future reference.
+
+### UC-06: View Results and Progress
+
+**Primary Actor:** End User
+
+**Goal:** Review previous learning performance.
+
+**Preconditions:** The user is authenticated. Relevant performance data is available if historical results are requested.
+
+**Trigger:** The user opens the results or progress section.
+
+**Main Flow:**
+1. The user opens the performance section.
+2. The system retrieves the user's available results.
+3. The system displays relevant quiz scores and simulation outcomes.
+4. The user reviews the available progress information.
+
+**Alternative Flow:**
+- If no results are available, the system displays an appropriate message.
+
+**Postconditions:** The user's available performance information is displayed.
+
+### UC-07: Manage Training Content
+
+**Primary Actor:** Administrator
+
+**Goal:** Maintain cybersecurity awareness learning material.
+
+**Preconditions:** The administrator is authenticated and authorized to manage content.
+
+**Trigger:** The administrator opens the training content management section.
+
+**Main Flow:**
+1. The administrator opens the content management interface.
+2. The administrator selects an action to add or update content.
+3. The administrator enters or modifies the content.
+4. The system validates the submitted information.
+5. The system saves the changes.
+6. The system displays a confirmation message.
+
+**Alternative Flow:**
+- If the submitted information is invalid, the system displays an error message.
+- If saving fails, the system informs the administrator.
+
+**Postconditions:** The training content is updated successfully, or an appropriate error is displayed.
+
+### UC-08: Manage Quiz Questions
+
+**Primary Actor:** Administrator
+
+**Goal:** Maintain the questions used in cybersecurity quizzes.
+
+**Preconditions:** The administrator is authenticated and authorized to manage quizzes.
+
+**Trigger:** The administrator opens the quiz management section.
+
+**Main Flow:**
+1. The administrator opens quiz management.
+2. The administrator selects an existing quiz or creates a new one, if supported.
+3. The administrator adds or updates quiz questions.
+4. The system validates the submitted information.
+5. The system saves the changes.
+6. The system displays the operation result.
+
+**Alternative Flow:**
+- If the submitted question information is invalid, the system displays an error.
+- If the changes cannot be saved, the system informs the administrator.
+
+**Postconditions:** Quiz information is updated successfully, or an appropriate error is displayed.
+
+## 8. Industry Mapping: Requirement Modeling
+
+Use Case Modeling is an important requirement modeling activity in software engineering. It converts stakeholder needs into identifiable system functions.
+
+For the proposed Cybersecurity Awareness Platform:
+
+- **Stakeholder requirements:** Users need cybersecurity education and phishing awareness; administrators need content management capabilities.
+- **Functional requirements:** Registration, login, training access, simulations, quizzes, progress viewing, feedback, and content management.
+- **Use Case Diagram:** Visualizes actors and their interactions with the proposed system.
+- **Use Case Narratives:** Explain the preconditions, normal interactions, alternative flows, and postconditions of important use cases.
+- **Testing support:** The narratives can be used as a starting point for deriving test scenarios and acceptance criteria.
+
+## 9. Observation
+
+Use Case Modeling helps identify the functional boundaries of the proposed system and clarifies how different actors interact with it. Use case descriptions provide additional detail about normal and alternative interaction flows.
+
+The identified use cases provide a structured basis for requirements analysis, system design, and future testing.
+
+## 10. Result
+
+The major actors and use cases of the proposed Cybersecurity Awareness Platform for Phishing Detection and Prevention were identified. The Use Case Diagram and use case narratives were prepared to represent the functional scope and actor-system interactions of the proposed software system.
+
+
+
+
+
+
+
+                    USE CASE DIAGRAM
+     Cybersecurity Awareness Platform
+
+             (End User)                  (Administrator)
+                 |                              |
+                 |                              |
+     +-----------|------------------------------|----------+
+     |           CYBERSECURITY AWARENESS PLATFORM          |
+     |                                                     |
+     |   (UC-01: Register Account)                         |
+     |   (UC-02: Log In)                                   |
+     |   (UC-03: Access Cybersecurity Training)            |
+     |   (UC-04: Learn About Phishing)                     |
+     |   (UC-05: Participate in Phishing Simulation)       |
+     |   (UC-06: Attempt Cybersecurity Quiz)               |
+     |   (UC-07: View Results and Progress)                |
+     |   (UC-08: Receive Performance Feedback)             |
+     |   (UC-09: Manage Training Content)                  |
+     |   (UC-10: Manage Quiz Questions)                    |
+     |                                                     |
+     +-----------------------------------------------------+
+
+End User Interactions:
+- Register Account
+- Log In
+- Access Cybersecurity Training
+- Learn About Phishing
+- Participate in Phishing Simulation
+- Attempt Cybersecurity Quiz
+- View Results and Progress
+- Receive Performance Feedback
+
+Administrator Interactions:
+- Log In
+- Manage Training Content
+- Manage Quiz Questions

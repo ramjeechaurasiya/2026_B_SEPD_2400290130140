@@ -1,0 +1,246 @@
+# Session 6: UML – Class Diagram Design
+
+**Project Title:** Cybersecurity Awareness Platform for Phishing Detection and Prevention
+
+**Prepared By:** Ramjee Chaurasiya
+
+**Role:** Team Leader
+
+## 1. Aim
+
+To perform Object-Oriented Analysis and design a UML Class Diagram for the proposed Cybersecurity Awareness Platform by identifying classes, attributes, methods, and relationships.
+
+## 2. Objectives
+
+- To understand Object-Oriented Analysis (OOA).
+- To identify the main classes required for the proposed system.
+- To define suitable attributes and methods for each class.
+- To identify relationships between classes.
+- To represent the static structure of the system using a UML Class Diagram.
+
+## 3. Introduction
+
+Object-Oriented Analysis (OOA) is a software engineering approach used to identify objects, classes, and their responsibilities based on system requirements. It helps organize a system into manageable components.
+
+UML (Unified Modeling Language) Class Diagrams represent the static structure of a system. They show classes, their attributes, methods, and relationships such as association, inheritance, and composition.
+
+For the proposed Cybersecurity Awareness Platform, classes are identified to represent users, training materials, phishing simulations, quizzes, questions, results, and administrator activities.
+
+## 4. Class Identification
+
+The following classes are proposed for the system:
+
+1. **User:** Stores user account details and provides authentication-related operations.
+2. **Administrator:** Represents an administrator responsible for managing platform content.
+3. **TrainingMaterial:** Represents cybersecurity learning content.
+4. **PhishingSimulation:** Represents a simulated phishing-awareness activity.
+5. **Quiz:** Represents a cybersecurity assessment.
+6. **Question:** Stores individual quiz questions and answer options.
+7. **QuizAttempt:** Records a user's attempt at a quiz.
+8. **Progress:** Stores a user's training and assessment progress.
+9. **Feedback:** Represents performance feedback provided to a user.
+
+## 5. Attributes and Methods
+
+### 5.1 User
+
+**Attributes:**
+- userId
+- name
+- email
+- passwordHash
+
+**Methods:**
+- register()
+- login()
+- accessTraining()
+- viewProgress()
+
+### 5.2 Administrator
+
+**Attributes:**
+- adminId
+- name
+- email
+
+**Methods:**
+- manageTrainingMaterial()
+- manageQuiz()
+- manageQuestions()
+
+### 5.3 TrainingMaterial
+
+**Attributes:**
+- materialId
+- title
+- description
+- content
+
+**Methods:**
+- displayMaterial()
+- updateMaterial()
+
+### 5.4 PhishingSimulation
+
+**Attributes:**
+- simulationId
+- title
+- scenario
+- difficultyLevel
+
+**Methods:**
+- startSimulation()
+- evaluateResponse()
+- displayResult()
+
+### 5.5 Quiz
+
+**Attributes:**
+- quizId
+- title
+- passingScore
+
+**Methods:**
+- addQuestion()
+- removeQuestion()
+- calculateScore()
+
+### 5.6 Question
+
+**Attributes:**
+- questionId
+- questionText
+- options
+- correctAnswer
+
+**Methods:**
+- displayQuestion()
+- checkAnswer()
+
+### 5.7 QuizAttempt
+
+**Attributes:**
+- attemptId
+- score
+- attemptDate
+
+**Methods:**
+- submitAttempt()
+- calculateResult()
+
+### 5.8 Progress
+
+**Attributes:**
+- progressId
+- completedModules
+- completionPercentage
+
+**Methods:**
+- updateProgress()
+- getProgress()
+
+### 5.9 Feedback
+
+**Attributes:**
+- feedbackId
+- message
+- recommendation
+
+**Methods:**
+- generateFeedback()
+- displayFeedback()
+
+## 6. UML Class Diagram
+
+The following is a text-based representation of the proposed class diagram. Each class is shown with its attributes and methods.
+
++--------------------------------------------------+
+|                       User                       |
++--------------------------------------------------+
+| - userId                                         |
+| - name                                           |
+| - email                                          |
+| - passwordHash                                   |
++--------------------------------------------------+
+| + register()                                     |
+| + login()                                        |
+| + accessTraining()                              |
+| + viewProgress()                                 |
++--------------------------------------------------+
+             | 1
+             | 
+             | 1..*
++--------------------------------------------------+
+|                  QuizAttempt                     |
++--------------------------------------------------+
+| - attemptId                                      |
+| - score                                          |
+| - attemptDate                                    |
++--------------------------------------------------+
+| + submitAttempt()                                |
+| + calculateResult()                              |
++--------------------------------------------------+
+             |
+             | 1
+             | *
++--------------------------------------------------+
+|                      Quiz                        |
++--------------------------------------------------+
+| - quizId                                         |
+| - title                                          |
+| - passingScore                                   |
++--------------------------------------------------+
+| + addQuestion()                                  |
+| + removeQuestion()                               |
+| + calculateScore()                               |
++--------------------------------------------------+
+             | 1
+             | 1..*
++--------------------------------------------------+
+|                    Question                      |
++--------------------------------------------------+
+| - questionId                                     |
+| - questionText                                   |
+| - options                                        |
+| - correctAnswer                                  |
++--------------------------------------------------+
+| + displayQuestion()                              |
+| + checkAnswer()                                  |
++--------------------------------------------------+
+
+User "1" -- "0..*" Progress : has
+User "1" -- "0..*" Feedback : receives
+User "0..*" -- "0..*" TrainingMaterial : accesses
+User "0..*" -- "0..*" PhishingSimulation : participates in
+Administrator "1" -- "0..*" TrainingMaterial : manages
+Administrator "1" -- "0..*" Quiz : manages
+Quiz "1" *-- "1..*" Question : contains
+
+## 7. Relationships Between Classes
+
+- **User – QuizAttempt:** One user can make multiple quiz attempts.
+- **QuizAttempt – Quiz:** Each quiz attempt is associated with a quiz.
+- **Quiz – Question:** A quiz contains one or more questions.
+- **User – Progress:** A user can have multiple progress records or updates.
+- **User – Feedback:** A user may receive multiple feedback records.
+- **User – TrainingMaterial:** Users can access multiple training materials.
+- **User – PhishingSimulation:** Users can participate in multiple simulations.
+- **Administrator – TrainingMaterial:** An administrator manages training materials.
+- **Administrator – Quiz:** An administrator manages quizzes.
+- **Quiz – Question:** Composition represents questions as parts of a quiz in this proposed model.
+
+## 8. Industry Mapping: Object-Oriented System Design
+
+Class Diagram modeling supports Object-Oriented System Design by defining the system's classes, responsibilities, and relationships before implementation.
+
+For the proposed platform, the model separates user management, learning content, phishing simulations, assessments, progress tracking, and feedback into distinct classes. This separation can improve modularity, maintainability, and future extensibility.
+
+## 9. Observation
+
+Object-Oriented Analysis helps convert functional requirements into classes and relationships. UML Class Diagram modeling provides a structured view of the proposed system's static architecture.
+
+## 10. Result
+
+The major classes, attributes, methods, and relationships of the proposed Cybersecurity Awareness Platform were identified, and a text-based UML Class Diagram was prepared as part of Object-Oriented System Design.
+
+**Note:** This is a proposed design model. The classes and methods should be validated against the actual implementation before being described as implemented features.
