@@ -1,0 +1,243 @@
+# Session 8: Software Design Principles
+
+**Project Title:** Cybersecurity Awareness Platform for Phishing Detection and Prevention
+
+**Prepared By:** Ramjee Chaurasiya
+
+**Role:** Team Leader
+
+## 1. Aim
+
+To analyze software design principles, including modularization, coupling and cohesion, function-oriented versus object-oriented design, and top-down versus bottom-up design, in the context of the proposed Cybersecurity Awareness Platform.
+
+## 2. Objectives
+
+- To understand the importance of modularization in software design.
+- To analyze coupling and cohesion between software components.
+- To compare function-oriented and object-oriented design approaches.
+- To understand top-down and bottom-up design methodologies.
+- To identify suitable design principles for the proposed platform.
+
+## 3. Introduction
+
+Software design is the process of converting software requirements into a structured solution that can be implemented, tested, and maintained. Good software design improves modularity, maintainability, reusability, scalability, and reliability.
+
+For the proposed Cybersecurity Awareness Platform, software design principles help organize functionalities such as user management, cybersecurity training, phishing simulations, quizzes, progress tracking, and performance feedback.
+
+## 4. Modularization
+
+### 4.1 Definition
+
+Modularization is the process of dividing a software system into smaller, independent, and manageable modules. Each module performs a specific responsibility and interacts with other modules through defined interfaces.
+
+### 4.2 Proposed Modules
+
+The Cybersecurity Awareness Platform can be divided into the following modules:
+
+1. **User Management Module:** Handles registration, login, and user account information.
+2. **Training Module:** Organizes and displays cybersecurity learning materials.
+3. **Phishing Simulation Module:** Supports simulated phishing-awareness activities.
+4. **Quiz Module:** Manages quiz questions, answers, and score calculation.
+5. **Progress Tracking Module:** Maintains information about completed training and assessment results.
+6. **Feedback Module:** Provides performance summaries and learning recommendations.
+7. **Administration Module:** Supports management of training materials and quiz content.
+
+### 4.3 Advantages of Modularization
+
+- Makes the system easier to understand and maintain.
+- Allows modules to be tested independently.
+- Simplifies debugging and error isolation.
+- Supports future feature additions.
+- Reduces the complexity of the complete system.
+
+## 5. Coupling and Cohesion Analysis
+
+### 5.1 Coupling
+
+Coupling describes the degree of dependency between different software modules. Lower coupling is generally preferred because a change in one module should have minimal impact on others.
+
+**Example:** The Quiz Module should request user information through a defined interface rather than directly modifying the internal data of the User Management Module.
+
+### 5.2 Types of Coupling
+
+- **Content Coupling:** One module directly accesses or modifies another module's internal implementation. It is generally undesirable.
+- **Common Coupling:** Multiple modules depend on shared global data.
+- **Control Coupling:** One module passes control information that determines another module's behavior.
+- **Stamp Coupling:** Modules pass a complete data structure when only a portion is required.
+- **Data Coupling:** Modules communicate using only the data needed for an operation.
+
+### 5.3 Cohesion
+
+Cohesion describes how closely related the responsibilities within a single module are. High cohesion is preferred because each module should focus on one well-defined task.
+
+### 5.4 Types of Cohesion
+
+- **Coincidental Cohesion:** Unrelated tasks are grouped together.
+- **Logical Cohesion:** Similar categories of tasks are grouped together.
+- **Temporal Cohesion:** Tasks executed at the same time are grouped together.
+- **Procedural Cohesion:** Tasks are grouped because they follow a particular sequence.
+- **Communicational Cohesion:** Tasks operate on the same data.
+- **Sequential Cohesion:** The output of one task becomes the input of another.
+- **Functional Cohesion:** All elements contribute to one clearly defined responsibility.
+
+### 5.5 Analysis for the Proposed Platform
+
+The platform should aim for low coupling and high cohesion.
+
+| Module | Cohesion Goal | Coupling Goal |
+|---|---|---|
+| User Management | Focus on user accounts and authentication | Communicate through defined interfaces |
+| Training | Focus on learning materials | Avoid direct changes to quiz internals |
+| Quiz | Focus on questions and scoring | Use necessary user and result data only |
+| Progress Tracking | Focus on progress records | Receive results through defined interfaces |
+| Feedback | Focus on performance feedback | Use assessment results without owning quiz logic |
+| Administration | Focus on content management | Use controlled operations to update content |
+
+These are design goals for the proposed architecture, not measured results from an implemented system.
+
+## 6. Function-Oriented vs Object-Oriented Design
+
+### 6.1 Function-Oriented Design
+
+Function-oriented design organizes a system around functions or processes. The system is divided into functions, each performing a particular operation.
+
+**Examples in the proposed platform:**
+- registerUser()
+- authenticateUser()
+- displayTraining()
+- calculateQuizScore()
+- updateProgress()
+
+**Advantages:**
+- Simple for small, process-focused programs.
+- Makes individual operations easy to identify.
+- Supports step-by-step functional decomposition.
+
+**Limitations:**
+- Shared data may become difficult to manage as the system grows.
+- Changes to data structures may affect several functions.
+- Large systems can become harder to maintain without clear modular boundaries.
+
+### 6.2 Object-Oriented Design
+
+Object-oriented design organizes the system around objects and classes that combine data and behavior.
+
+**Examples in the proposed platform:**
+- User
+- TrainingMaterial
+- PhishingSimulation
+- Quiz
+- Question
+- QuizAttempt
+- Progress
+- Feedback
+
+**Advantages:**
+- Encapsulation helps protect internal data.
+- Classes can support reuse and maintainability.
+- Responsibilities can be separated into distinct components.
+- The model maps naturally to entities identified during object-oriented analysis.
+
+**Limitations:**
+- Requires careful class and relationship design.
+- Poorly designed class hierarchies can introduce unnecessary complexity.
+- Small problems may not need a large object model.
+
+### 6.3 Comparison
+
+| Basis | Function-Oriented Design | Object-Oriented Design |
+|---|---|---|
+| Main focus | Functions and processes | Objects and classes |
+| Data handling | Data is processed by functions | Data and behavior are grouped |
+| Decomposition | Functional decomposition | Class and object decomposition |
+| Reusability | Reuse of functions | Reuse through classes and composition |
+| Suitability | Small, process-oriented tasks | Systems with related entities and evolving features |
+
+### 6.4 Suitable Approach
+
+Object-oriented design is a suitable proposed approach for the Cybersecurity Awareness Platform because the system contains distinct entities such as users, quizzes, questions, training materials, and assessment attempts. Function-oriented decomposition can still be used inside individual modules for specific operations.
+
+## 7. Top-Down and Bottom-Up Design
+
+### 7.1 Top-Down Design
+
+Top-down design starts with the complete system and progressively decomposes it into smaller subsystems and modules.
+
+**Proposed hierarchy:**
+
+Cybersecurity Awareness Platform  
+→ User Management  
+→ Training and Phishing Simulation  
+→ Quiz and Assessment  
+→ Progress Tracking and Feedback  
+→ Administration
+
+**Advantages:**
+- Provides a clear view of the overall system.
+- Helps define system-level requirements and module boundaries.
+- Supports structured planning.
+
+**Limitations:**
+- Low-level implementation details may be discovered late.
+- Modules can be difficult to validate before dependent components exist.
+
+### 7.2 Bottom-Up Design
+
+Bottom-up design begins by designing and validating smaller components, then combines them into larger subsystems and the complete system.
+
+**Example for the proposed platform:**
+
+Question and scoring components  
+→ Quiz Module  
+→ Assessment and Progress Tracking  
+→ Integrated Cybersecurity Awareness Platform
+
+**Advantages:**
+- Supports independent component development and testing.
+- Encourages reuse of well-defined components.
+- Helps validate low-level functionality early.
+
+**Limitations:**
+- The overall architecture may be less clear if component boundaries are not planned.
+- Integration can become difficult when components use inconsistent interfaces.
+
+### 7.3 Comparison
+
+| Basis | Top-Down Design | Bottom-Up Design |
+|---|---|---|
+| Starting point | Complete system | Small components |
+| Direction | General to specific | Specific to general |
+| Main benefit | Overall structure and planning | Component reuse and early testing |
+| Main challenge | Low-level details may emerge late | Integration and architecture consistency |
+| Typical use | System architecture and decomposition | Component development and integration |
+
+### 7.4 Recommended Approach
+
+A combination of top-down and bottom-up design is suitable for the proposed platform. Top-down design can define the overall modules, while bottom-up development can build and test components such as quiz scoring, question validation, and progress calculations before integration.
+
+## 8. Proposed Design Recommendations
+
+1. Divide the platform into modules with clearly defined responsibilities.
+2. Keep coupling between modules low.
+3. Maintain high cohesion within each module.
+4. Prefer object-oriented modeling for the main domain entities.
+5. Use top-down design to establish the architecture.
+6. Use bottom-up development and testing for individual components.
+7. Define clear interfaces between authentication, training, assessment, and progress tracking.
+8. Review the design as requirements evolve.
+
+## 9. Industry Mapping: Software Design Engineering
+
+Software Design Engineering applies software design principles to create maintainable, reliable, and extensible software architectures. Modularization, coupling and cohesion analysis, and design methodology selection help engineers control complexity and prepare a system for implementation.
+
+For the proposed Cybersecurity Awareness Platform, these principles provide a foundation for organizing the main responsibilities and planning interactions between modules.
+
+## 10. Observation
+
+The analysis shows that modularization improves manageability, low coupling reduces dependencies, and high cohesion keeps module responsibilities focused. Function-oriented and object-oriented design offer different ways to organize software, while top-down and bottom-up design can be combined to plan and implement the system.
+
+## 11. Result
+
+A Design Analysis Report was prepared for the proposed Cybersecurity Awareness Platform, covering modularization, coupling and cohesion, function-oriented versus object-oriented design, and top-down versus bottom-up design.
+
+The proposed recommendations provide a foundation for the next stages of software design and implementation.
