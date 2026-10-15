@@ -1,0 +1,234 @@
+# Session 9: Software Architecture Design and Design Patterns
+
+**Project Title:** Cybersecurity Awareness Platform for Phishing Detection and Prevention
+
+**Prepared By:** Ramjee Chaurasiya
+
+**Role:** Team Leader
+
+## 1. Aim
+
+To study software architecture design approaches and prepare a proposed system architecture for the Cybersecurity Awareness Platform using layered architecture, client-server architecture, and the conceptual model of microservices.
+
+## 2. Objectives
+
+- To understand the importance of software architecture in system development.
+- To design a layered architecture for the proposed platform.
+- To understand the client-server architecture model.
+- To study microservices architecture conceptually.
+- To prepare a system architecture diagram representing the major system components and their interactions.
+
+## 3. Introduction
+
+Software architecture defines the high-level structure of a software system, including its components, responsibilities, communication mechanisms, and data storage.
+
+A well-designed architecture improves maintainability, scalability, reliability, and security. It also helps developers understand how different parts of a system work together.
+
+The proposed Cybersecurity Awareness Platform provides cybersecurity training, phishing-awareness simulations, quizzes, progress tracking, and performance feedback. Its architecture should separate user interaction, business logic, and data storage while allowing future expansion.
+
+## 4. Layered Architecture Design
+
+### 4.1 Definition
+
+Layered architecture divides a software system into logical layers. Each layer has a specific responsibility and communicates with other layers through defined interfaces.
+
+### 4.2 Proposed Layers
+
+**1. Presentation Layer**
+
+- Provides the user interface.
+- Displays training materials, quizzes, simulation activities, and progress.
+- Accepts user input and displays system responses.
+
+**2. Application or Business Logic Layer**
+
+- Handles registration and authentication workflows.
+- Coordinates training and phishing simulation activities.
+- Processes quiz submissions and calculates results.
+- Coordinates progress tracking and feedback generation.
+- Enforces application-level rules.
+
+**3. Data Access Layer**
+
+- Provides controlled access to stored information.
+- Performs database operations.
+- Separates data storage details from business logic.
+
+**4. Database Layer**
+
+Stores information such as:
+- User account records.
+- Training materials.
+- Quiz questions and assessment results.
+- Simulation activity records.
+- User progress and feedback.
+
+### 4.3 Advantages
+
+- Clear separation of responsibilities.
+- Easier maintenance and testing.
+- Changes in one layer can often be isolated from others.
+- Supports organized development and debugging.
+
+## 5. Client-Server Architecture
+
+### 5.1 Definition
+
+Client-server architecture is a model in which a client sends requests to a server, and the server processes those requests and returns responses.
+
+### 5.2 Application to the Proposed Platform
+
+**Client:** A web browser used by a student or administrator.
+
+**Server:** The application server that processes authentication, training, quiz, and progress-related requests.
+
+**Database Server:** Stores and retrieves user accounts, training content, assessment results, and progress records.
+
+### 5.3 Working
+
+1. A user opens the platform in a browser.
+2. The browser sends a request to the application server.
+3. The server validates the request and executes the relevant business logic.
+4. The data access layer reads or updates the database when required.
+5. The server returns the result to the browser.
+6. The browser displays the response to the user.
+
+### 5.4 Advantages
+
+- Centralized business logic and data management.
+- Multiple clients can access the same server.
+- Access control can be enforced on the server.
+- Server-side maintenance can be performed independently of client devices.
+
+## 6. Microservices Architecture (Conceptual)
+
+### 6.1 Definition
+
+Microservices architecture structures an application as a collection of small, independently deployable services. Each service is responsible for a specific business capability and communicates with other services through defined interfaces.
+
+### 6.2 Possible Services for the Proposed Platform
+
+**1. User Service:** Manages user accounts and authentication-related operations.
+
+**2. Training Service:** Manages cybersecurity learning materials.
+
+**3. Simulation Service:** Handles phishing-awareness simulation activities.
+
+**4. Assessment Service:** Manages quizzes, questions, submissions, and score calculation.
+
+**5. Progress Service:** Tracks learning progress and assessment history.
+
+**6. Feedback Service:** Produces performance summaries and learning recommendations.
+
+### 6.3 Conceptual Working
+
+1. A user submits a request through the client application.
+2. The request reaches the relevant service through an API or gateway.
+3. The service executes its assigned responsibility.
+4. It accesses the required data through its defined data-access mechanism.
+5. The service returns a response to the client or communicates with another service when necessary.
+
+### 6.4 Advantages
+
+- Individual services can be developed and deployed independently.
+- Services can be scaled according to their workload.
+- A failure in one service may be isolated if appropriate fault-handling mechanisms exist.
+- Different services can evolve according to their own requirements.
+
+### 6.5 Challenges
+
+- Distributed communication introduces complexity.
+- Monitoring and debugging require additional effort.
+- Service-to-service authentication and authorization must be managed.
+- Data consistency and deployment coordination can be challenging.
+- Microservices may introduce unnecessary overhead for a small project.
+
+**Design Decision:** A layered client-server architecture is proposed as the initial design because it is comparatively simple to develop and maintain. Microservices are discussed as a possible future architecture if the platform grows and independent scaling or deployment becomes necessary.
+
+## 7. System Architecture Diagram
+
+The following text-based diagram represents the proposed architecture.
+
++-------------------------------------------------------+
+|                     CLIENT LAYER                      |
++-------------------------------------------------------+
+|                                                       |
+|             Web Browser / User Interface              |
+|                                                       |
+|       Student Interface     Administrator Interface   |
+|                                                       |
++---------------------------+---------------------------+
+                            |
+                            | HTTP/HTTPS Requests
+                            v
++-------------------------------------------------------+
+|                APPLICATION SERVER                     |
++-------------------------------------------------------+
+|                                                       |
+|               Application / API Layer                 |
+|                                                       |
+|  +----------------+  +-----------------------------+  |
+|  | Authentication |  | Training and Simulation     |  |
+|  |                |  | Management                  |  |
+|  +----------------+  +-----------------------------+  |
+|                                                       |
+|  +----------------+  +-----------------------------+  |
+|  | Quiz and       |  | Progress and Feedback       |  |
+|  | Assessment     |  | Management                  |  |
+|  +----------------+  +-----------------------------+  |
+|                                                       |
++---------------------------+---------------------------+
+                            |
+                            | Data Access
+                            v
++-------------------------------------------------------+
+|                    DATABASE LAYER                     |
++-------------------------------------------------------+
+|                                                       |
+|  User Accounts | Training Materials | Quiz Questions  |
+|                                                       |
+|  Quiz Results  | Simulation Records | User Progress   |
+|                                                       |
++-------------------------------------------------------+
+
+### Architecture Flow
+
+Client Interface
+→ Application/API Layer
+→ Business Logic Modules
+→ Data Access Layer
+→ Database
+
+The response travels back through the application layer to the client interface.
+
+**Note:** This diagram represents a proposed logical architecture. It does not claim that the project currently uses a particular framework, database, API gateway, or microservices deployment.
+
+## 8. Architecture Comparison
+
+| Feature | Layered Architecture | Client-Server Architecture | Microservices Architecture |
+|---|---|---|---|
+| Main focus | Separation of responsibilities | Communication between clients and servers | Independent business services |
+| Structure | Logical layers | Clients and servers | Multiple separate services |
+| Complexity | Low to moderate | Low to moderate | Relatively high |
+| Deployment | Often deployed as one application | Client and server components | Services can be deployed independently |
+| Best fit | Organized application development | Web-based request-response systems | Large or independently scalable systems |
+
+These approaches are not mutually exclusive. A client-server application can use layered architecture, and individual microservices can also contain their own internal layers.
+
+## 9. Industry Mapping: System Architecture Planning
+
+System Architecture Planning identifies the major components of a system, defines their responsibilities, and determines how they communicate and exchange data.
+
+For the proposed Cybersecurity Awareness Platform, architecture planning separates the user interface, application logic, data-access operations, and database responsibilities. The conceptual microservices model also identifies possible future service boundaries.
+
+This planning supports maintainability, controlled growth, and future implementation decisions.
+
+## 10. Observation
+
+Layered architecture helps organize system responsibilities, while client-server architecture explains how clients interact with the application server. Microservices provide an alternative for systems that need independent service deployment and scaling, but they also introduce additional operational complexity.
+
+## 11. Result
+
+A proposed System Architecture Design was prepared for the Cybersecurity Awareness Platform. The report covers layered architecture, client-server architecture, and conceptual microservices, and includes a text-based System Architecture Diagram.
+
+The architecture provides a high-level foundation for future software implementation and system integration.
