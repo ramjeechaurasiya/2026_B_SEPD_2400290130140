@@ -1,0 +1,164 @@
+# Session 7: UML – Sequence and Activity Diagram Modeling
+
+**Project Title:** Cybersecurity Awareness Platform for Phishing Detection and Prevention
+
+**Prepared By:** Ramjee Chaurasiya
+
+**Role:** Team Leader
+
+## 1. Aim
+
+To model the interactions and workflows of the proposed Cybersecurity Awareness Platform using UML Sequence Diagrams and Activity Diagrams.
+
+## 2. Objectives
+
+- To understand UML Sequence Diagram modeling.
+- To represent message flow between system components.
+- To model workflows using UML Activity Diagrams.
+- To understand the order of interactions involved in user authentication and quiz assessment.
+- To prepare sequence and activity diagrams for the proposed system.
+
+## 3. Introduction
+
+Unified Modeling Language (UML) provides graphical notations for modeling software systems. Sequence Diagrams represent interactions between participants in chronological order, while Activity Diagrams represent workflows, decisions, and the sequence of activities in a process.
+
+For the proposed Cybersecurity Awareness Platform, these diagrams help explain how a user logs in and completes a cybersecurity quiz.
+
+## 4. Sequence Diagram Design
+
+### 4.1 Definition
+
+A UML Sequence Diagram illustrates how actors and system components exchange messages over time. Participants are represented by lifelines, and messages show requests and responses in chronological order.
+
+### 4.2 Scenario: User Login
+
+**Participants:**
+- User
+- Login Interface
+- Authentication Module
+- User Database
+
+### 4.3 Sequence Diagram (Text Representation)
+
+```text
+ User       Login Interface   Authentication Module   User Database
+  |                |                   |                    |
+  |--Enter Login-->|                   |                    |
+  |                |--Submit Details-->|                    |
+  |                |                   |--Find User-------->|
+  |                |                   |<--User Record------|
+  |                |                   |                    |
+  |                |                   | Validate Password  |
+  |                |<--Login Result----|                    |
+  |<--Show Result--|                   |                    |
+  |                |                   |                    |
+```
+
+### 4.4 Message Flow Explanation
+
+1. The user enters login credentials in the login interface.
+2. The interface sends the submitted details to the authentication module.
+3. The authentication module requests the relevant user record from the database.
+4. The database returns the record, if available.
+5. The authentication module validates the credentials.
+6. The interface displays a success or failure message to the user.
+
+**Security consideration:** Passwords should be stored as secure password hashes. The system should validate credentials without retrieving or storing plaintext passwords.
+
+## 5. Activity Diagram Modeling
+
+### 5.1 Definition
+
+A UML Activity Diagram represents the workflow of a system or process. It uses initial and final nodes, activities, decision nodes, and control-flow arrows to show the order in which tasks occur.
+
+### 5.2 Scenario: Cybersecurity Quiz Assessment
+
+The activity begins when a user opens a quiz. The system displays questions, accepts answers, evaluates the submission, calculates the result, and displays feedback.
+
+### 5.3 Activity Diagram (Text Representation)
+
+```text
+                 (START)
+                    |
+                    v
+             [Open Cybersecurity Quiz]
+                    |
+                    v
+             [Display Quiz Questions]
+                    |
+                    v
+              [Select Answers]
+                    |
+                    v
+              [Submit Quiz]
+                    |
+                    v
+             [Validate Submission]
+                    |
+                    v
+            <Submission Valid?>
+                /          \
+              No            Yes
+              |              |
+              v              v
+      [Show Validation   [Evaluate Answers]
+          Message]            |
+              |               v
+              |         [Calculate Score]
+              |               |
+              |               v
+              |         [Generate Feedback]
+              |               |
+              |               v
+              |         [Save Quiz Result]
+              |               |
+              |               v
+              |         [Display Result]
+              |               |
+              |               v
+              |             (END)
+              |
+              +----> [Correct Submission]
+                       |
+                       +----> [Submit Quiz]
+```
+
+### 5.4 Workflow Explanation
+
+1. The user opens a cybersecurity quiz.
+2. The system displays the available questions.
+3. The user selects answers and submits the quiz.
+4. The system validates the submission.
+5. If the submission is invalid, the system displays a validation message and allows correction.
+6. If the submission is valid, the system evaluates the answers.
+7. The system calculates the score and generates feedback.
+8. The quiz result is saved.
+9. The system displays the result and completes the workflow.
+
+## 6. Difference Between Sequence and Activity Diagrams
+
+| Basis | Sequence Diagram | Activity Diagram |
+|---|---|---|
+| Main purpose | Shows interactions between participants | Shows workflow and control flow |
+| Focus | Message order over time | Activities and decisions |
+| Main elements | Participants, lifelines, messages | Activities, decisions, start and end nodes |
+| Useful for | Understanding component communication | Understanding process steps |
+| Example in this project | User login | Cybersecurity quiz assessment |
+
+## 7. Industry Mapping: Interaction and Workflow Modeling
+
+Interaction and Workflow Modeling helps software engineers understand how users and system components collaborate to complete a task.
+
+For the proposed Cybersecurity Awareness Platform, the Sequence Diagram describes the flow of login messages between the user interface, authentication module, and database. The Activity Diagram describes the quiz-assessment workflow, including validation, scoring, result storage, and feedback.
+
+These models help clarify requirements and identify missing steps before implementation.
+
+## 8. Observation
+
+Sequence Diagrams clarify the order of messages exchanged between system participants. Activity Diagrams clarify the order of activities and the decisions that affect a workflow. Together, they provide complementary views of system behavior.
+
+## 9. Result
+
+Sequence and Activity Diagram models were prepared for the proposed Cybersecurity Awareness Platform. The diagrams represent the user-login interaction flow and the cybersecurity quiz-assessment workflow.
+
+**Note:** These diagrams represent a proposed system design. Their details should be verified against the actual implementation before being described as implemented behavior.
